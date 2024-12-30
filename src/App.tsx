@@ -13,17 +13,17 @@ export default function App() {
   return (
     <React.StrictMode>
       <StyledEngineProvider injectFirst>
-          <AppTheme >
-            <CssBaseline enableColorScheme/>
-            <BrowserRouter>
-              <AppAppBar />
-              <Pages />
-              <Footer/>
-              {/* scroll to top section */}
-              <ScrollFab />
-            </BrowserRouter>
-          </AppTheme>
+        <AppTheme >
+          <CssBaseline enableColorScheme/>
+          <BrowserRouter>
+            <AppAppBar />
+            <Pages />
+            <Footer/>
+            {/* scroll to top section */}
+            <ScrollFab />
+          </BrowserRouter>
+        </AppTheme>
       </StyledEngineProvider>
-    </React.StrictMode>
+    </React.StrictMode> 
   );
 }
