@@ -123,7 +123,7 @@ export function MobileLayout({
   );
 }
 
-export default function Features() {
+export default function Expect() {
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
 
   const handleItemClick = (index: number) => {
@@ -133,7 +133,7 @@ export default function Features() {
   const selectedFeature = items[selectedItemIndex];
 
   return (
-    <Container id="features" 
+    <Container id="expect" 
       sx={{
         pt: { xs: 4, sm: 12 },
         pb: { xs: 8, sm: 16 },
@@ -151,45 +151,45 @@ export default function Features() {
       }}
       >
       <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 1,
-              delay: 0.1,
-              ease: [0.215, 0.61, 0.355, 1]
-            }}
-          >
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1,
+            delay: 0.1,
+            ease: [0.215, 0.61, 0.355, 1]
+          }}
+        >
+        <Typography
+          component="h2"
+          variant="h3"
+          gutterBottom
+          sx={{ color: 'text.primary', fontWeight: 700 }}
+        >
+          What You Can&nbsp;
           <Typography
-            component="h2"
-            variant="h3"
-            gutterBottom
-            sx={{ color: 'text.primary', fontWeight: 700 }}
-          >
-            What You Can&nbsp;
-            <Typography
-              component="span"
-              variant="h1"
-              sx={(theme) => ({
-                fontSize: 'inherit',
+            component="span"
+            variant="h1"
+            sx={(theme) => ({
+              fontSize: 'inherit',
+              background: 'linear-gradient(30deg, #183871, #88D8FF)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              ...theme.applyStyles('dark', {
                 background: 'linear-gradient(30deg, #183871, #88D8FF)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                ...theme.applyStyles('dark', {
-                  background: 'linear-gradient(30deg, #183871, #88D8FF)',
-                }),
-              })}
-            >
-              Expect
-            </Typography>
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{ color: 'text.secondary', mb: { xs: 2, sm: 4 } }}
+              }),
+            })}
           >
-            After leaving the ICU, it&apos;s normal to have questions or concerns. We&apos;re here to:
+            Expect
           </Typography>
-        </motion.div>
+        </Typography>
+        <Typography
+          variant="body1"
+          sx={{ color: 'text.secondary', mb: { xs: 2, sm: 4 } }}
+        >
+          After leaving the ICU, it&apos;s normal to have questions or concerns. We&apos;re here to:
+        </Typography>
+      </motion.div>
       </Box>
       <Box
         sx={{

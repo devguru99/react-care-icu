@@ -1,9 +1,10 @@
 import * as React from 'react';
-import Divider from '@mui/material/Divider';
 import Hero from '@/components/Hero';
-import FAQ from '@/components/FAQ';
+
 import Different from '@/components/Homepage/Different';
 import Expect from '@/components/Homepage/Expect';
+import Future from '@/components/Homepage/Future';
+
 
 export default function HomePage() {
   return (
@@ -12,9 +13,7 @@ export default function HomePage() {
       <div>
         <Different />
         <Expect />
-        <Divider />
-        <FAQ />
-        <Divider />
+        <Future />
       </div>
     </>
       
