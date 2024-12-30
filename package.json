@@ -1,0 +1,41 @@
+{
+  "name": "care-beyond-icu",
+  "private": true,
+  "version": "0.1.0",
+  "homepage": "https://devguru99.github.io/react-care-icu/",
+  "type": "module",
+  "scripts": {
+    "deploy": "gh-pages -d dist",
+    "dev": "vite --host localhost.care",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.0",
+    "@mui/icons-material": "6.3.0",
+    "@mui/material": "6.3.0",
+    "@mui/system": "6.3.0",
+    "@mui/utils": "6.3.0",
+    "framer-motion": "^11.15.0",
+    "gh-pages": "^6.2.0",
+    "is-mobile": "^5.0.0",
+    "notistack": "^3.0.1",
+    "path": "^0.12.7",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-helmet-async": "^2.0.5",
+    "react-router-dom": "^7.1.1",
+    "recoil": "^0.7.7",
+    "vite-plugin-pwa": "^0.21.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest",
+    "dotenv": "^16.4.7",
+    "typescript": "latest",
+    "vite": "latest"
+  }
+}
