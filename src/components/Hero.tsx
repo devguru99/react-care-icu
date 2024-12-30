@@ -82,14 +82,14 @@ export default function Hero() {
               sx={{
                 display: 'flex',
                 flexDirection: { xs: 'column', sm: 'row' },
+                flexWrap: 'wrap',
                 alignItems: 'center',
                 fontSize: 'clamp(3rem, 10vw, 3.5rem)',
               }}
             >
               Your&nbsp;
               <Typography
-                component="span"
-                variant="h1"
+                variant="inherit"
                 sx={(theme) => ({
                   fontSize: 'inherit',
                   background: 'linear-gradient(30deg, #183871, #88D8FF)',
@@ -144,16 +144,6 @@ export default function Hero() {
               the next step toward feeling better and staying well.
             </Typography>
           </Typography>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 1,
-              delay: 0.1,
-              ease: [0.215, 0.61, 0.355, 1]
-            }}
-          >
             <Stack
               direction={{ xs: 'column', sm: 'row' }}
               spacing={1}
@@ -205,7 +195,6 @@ export default function Hero() {
                 Get Started Today
               </Button>
             </Stack>
-          </motion.div>
         </Stack>
         <motion.div
             initial={{ opacity: 0, y: 30 }}
