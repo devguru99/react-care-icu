@@ -26,13 +26,15 @@ export default function Future() {
       <Box
         sx={{
           display: 'flex',
+          width: 'inherit',
           flexDirection: { xs: 'column', md: 'row-reverse' },
           gap: 2,
+          alignItems: {xs: 'center'},
         }}
       >
         <Box
           sx={{
-            display: { xs: 'none', sm: 'flex' },
+            display: 'flex',
             width: { xs: '100%', md: '50%' },
             height: 'var(--items-image-height)',
             flexDirection: 'column',
@@ -74,9 +76,20 @@ export default function Future() {
                 </Typography>
                 Starts Here
               </Typography>
+              </motion.div>
+              <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 1,
+                delay: 0.1,
+                ease: [0.215, 0.61, 0.355, 1]
+              }}
+            >
               <Typography
                 variant="h5"
-                sx={{ color: 'text.secondary', mb: { xs: 2, sm: 4 } }}
+                sx={{ color: 'text.secondary', mb: { xs: 2, sm: 4 }, display: 'flex', flexWrap: 'wrap', alignItems: 'center', textAlign: 'center' }}
               >
                 We&apos;ll work with you to make sure you&apos;re on the right track - because your recovery is our priority.
               </Typography>
@@ -84,7 +97,7 @@ export default function Future() {
         </Box>
         <Box
           sx={{
-            display: { xs: 'none', sm: 'flex' },
+            display: 'flex',
             width: { xs: '100%', md: '50%' },
             height: 'var(--items-image-height)',
           }}
@@ -94,10 +107,11 @@ export default function Future() {
             sx={{
               height: '100%',
               width: '100%',
-              display: { xs: 'none', sm: 'flex' },
+              display: 'flex',
               pointerEvents: 'none',
               border: 'none',
-              backgroundColor: 'inherit'
+              backgroundColor: 'inherit',
+              justifyContent: 'center',
             }}
           >
             <motion.div

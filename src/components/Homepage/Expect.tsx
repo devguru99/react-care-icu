@@ -78,7 +78,7 @@ export function MobileLayout({
         gap: 2,
       }}
     >
-      <Box sx={{ display: 'flex', gap: 2, overflow: 'auto' }}>
+      <Box sx={{ display: 'flex', gap: 2, overflow: 'auto', flexWrap: 'wrap' }}>
         {items.map(({ title }, index) => (
           <Chip
             size="medium"

@@ -85,6 +85,7 @@ export default function Hero() {
                 flexWrap: 'wrap',
                 alignItems: 'center',
                 fontSize: 'clamp(3rem, 10vw, 3.5rem)',
+                justifyContent: 'center',
               }}
             >
               Your&nbsp;
