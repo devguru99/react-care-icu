@@ -20,22 +20,23 @@
     "framer-motion": "^11.15.0",
     "gh-pages": "^6.2.0",
     "is-mobile": "^5.0.0",
-    "notistack": "^3.0.1",
     "path": "^0.12.7",
+    "prettier": "^3.4.2",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-helmet-async": "^2.0.5",
     "react-router-dom": "^7.1.1",
+    "react-toastify": "^11.0.2",
     "recoil": "^0.7.7",
     "vite-plugin-pwa": "^0.21.1"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "@vitejs/plugin-react": "latest",
+    "@types/react": "19.0.2",
+    "@types/react-dom": "19.0.2",
+    "@vitejs/plugin-react": "4.3.4",
     "dotenv": "^16.4.7",
-    "typescript": "latest",
-    "vite": "latest"
+    "typescript": "5.7.2",
+    "vite": "6.0.6"
   }
 }
