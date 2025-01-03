@@ -59,7 +59,7 @@ export default function Future() {
               >
                 <Typography
                   component="span"
-                  variant="h1"
+                  variant="h3"
                   sx={(theme) => ({
                     fontSize: 'inherit',
                     background: 'linear-gradient(30deg, #183871, #88D8FF)',
@@ -68,6 +68,7 @@ export default function Future() {
                     ...theme.applyStyles('dark', {
                       background: 'linear-gradient(30deg, #183871, #88D8FF)',
                     }),
+                    fontWeight: 700,
                   })}
                 >
                   A Healthier Future&nbsp; 
@@ -129,6 +130,7 @@ export default function Future() {
                     width: 500,
                     height: 350,
                   }}
+                  alt='Future'
                 />
             </motion.div>
           </Card>
