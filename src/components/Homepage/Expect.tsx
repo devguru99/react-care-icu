@@ -196,6 +196,7 @@ export default function Expect() {
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row-reverse' },
           gap: 2,
+          width: {xs: 'inherit'}
         }}
       >
         

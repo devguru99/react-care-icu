@@ -13,6 +13,11 @@ import { styled } from '@mui/material/styles';
 
 // @third-party
 import { motion } from 'framer-motion';
+import { Skeleton } from '@mui/material';
+
+interface HeroProps {
+  loading?: boolean;
+}
 
 const StyledBox = styled('div')(({ theme }) => ({
   alignSelf: 'center',
@@ -37,7 +42,9 @@ const StyledBox = styled('div')(({ theme }) => ({
   }),
 }));
 
-export default function Hero() {
+export default function Hero(props: HeroProps) {
+  const { loading = false } = props;
+
   return (
     <Box
       id="hero"
@@ -111,10 +118,10 @@ export default function Hero() {
             sx={{
               textAlign: 'center',
               color: 'text.secondary',
-              width: { sm: '100%', md: '80%' },
+              width: '100%',
             }}
           >
-            Getting back to normal after an ICU stay can be challenging - but you don&apos;t have to do it alone. At ICU, we&apos;re here to make your recovery as&nbsp; 
+            Recovering after an ICU stay can be overwhelming, but we&apos;re here to make it simple and seamless. Our virtual care service is designed to bridge the gap in your recovery,&nbsp; 
             <Typography
               component="span"
               sx={{
@@ -122,9 +129,9 @@ export default function Hero() {
                 fontWeight: 700,
               }}
             >
-              smooth and worry - free as possible
+              offering expert support that prevents readmissions and ensures peace of mind.
             </Typography>
-                . Through virtual visits with experts who understand&nbsp;
+              From personalized recovery plans and medication reconciliation to guiding follow-up care and empowering you with education, we&apos;re redefining post-ICU care. With us, you&apos;re not just a patient -&nbsp;
             <Typography
               component="span"
               sx={{
@@ -132,9 +139,9 @@ export default function Hero() {
                 fontWeight: 700,
               }}
             >
-              your unique needs
+              you&apos;re a partner in building a healthier, stronger future.&nbsp;
             </Typography>
-              , we help you take&nbsp;
+            Let us help you recover&nbsp;
             <Typography
               component="span"
               sx={{
@@ -142,7 +149,7 @@ export default function Hero() {
                 fontWeight: 700,
               }}
             >
-              the next step toward feeling better and staying well.
+              smarter, safer, and stress-free.
             </Typography>
           </Typography>
             <Stack
@@ -208,7 +215,22 @@ export default function Hero() {
             }}
           >
           <StyledBox id="video">
-            <video
+            {loading ? <Skeleton variant="rectangular"
+              width={1150}
+              height={698}>
+                <video
+                  src="/hero1.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover', // Ensures the video covers the entire box
+                  }}
+                />
+              </Skeleton> : (
+              <video
               src="/hero1.mp4"
               autoPlay
               muted
@@ -219,6 +241,8 @@ export default function Hero() {
                 objectFit: 'cover', // Ensures the video covers the entire box
               }}
             />
+          )}
+            
           </StyledBox>
         </motion.div>
       </Container>
