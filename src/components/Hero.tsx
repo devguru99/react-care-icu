@@ -113,97 +113,8 @@ export default function Hero(props: HeroProps) {
               &nbsp;in Recovery
             </Typography>
           </motion.div>
-         
-          <Typography
-            sx={{
-              textAlign: 'center',
-              color: 'text.secondary',
-              width: '100%',
-            }}
-          >
-            Recovering after an ICU stay can be overwhelming, but we&apos;re here to make it simple and seamless. Our virtual care service is designed to bridge the gap in your recovery,&nbsp; 
-            <Typography
-              component="span"
-              sx={{
-                color: '#183871',
-                fontWeight: 700,
-              }}
-            >
-              offering expert support that prevents readmissions and ensures peace of mind.
-            </Typography>
-              From personalized recovery plans and medication reconciliation to guiding follow-up care and empowering you with education, we&apos;re redefining post-ICU care. With us, you&apos;re not just a patient -&nbsp;
-            <Typography
-              component="span"
-              sx={{
-                color: '#183871',
-                fontWeight: 700,
-              }}
-            >
-              you&apos;re a partner in building a healthier, stronger future.&nbsp;
-            </Typography>
-            Let us help you recover&nbsp;
-            <Typography
-              component="span"
-              sx={{
-                color: '#183871',
-                fontWeight: 700,
-              }}
-            >
-              smarter, safer, and stress-free.
-            </Typography>
-          </Typography>
-            <Stack
-              direction={{ xs: 'column', sm: 'row' }}
-              spacing={1}
-              useFlexGap
-              sx={{ pt: 2, width: { xs: '100%', sm: '500px' } }}
-            >
-              <InputLabel htmlFor="name-hero" sx={visuallyHidden}>
-                Name
-              </InputLabel>
-              <TextField
-                id="name-hero"
-                hiddenLabel
-                size="small"
-                variant="outlined"
-                aria-label="Enter your Name"
-                placeholder="Your Name"
-                fullWidth
-                slotProps={{
-                  htmlInput: {
-                    autoComplete: 'off',
-                    'aria-label': 'Enter your Name',
-                  },
-                }}
-              />
-              <InputLabel htmlFor="email-hero" sx={visuallyHidden}>
-                Email
-              </InputLabel>
-              <TextField
-                id="email-hero"
-                hiddenLabel
-                size="small"
-                variant="outlined"
-                aria-label="Enter your email address"
-                placeholder="Your email address"
-                fullWidth
-                slotProps={{
-                  htmlInput: {
-                    autoComplete: 'off',
-                    'aria-label': 'Enter your email address',
-                  },
-                }}
-              />
-              <Button
-                variant="contained"
-                color="primary"
-                size="small"
-                sx={{ minWidth: 'fit-content' }}
-              >
-                Get Started Today
-              </Button>
-            </Stack>
         </Stack>
+
         <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -214,10 +125,16 @@ export default function Hero(props: HeroProps) {
               ease: [0.215, 0.61, 0.355, 1]
             }}
           >
-          <StyledBox id="video">
+          <StyledBox id="video"
+            sx={{
+              marginTop: '20px !important',
+              marginBottom: '20px',
+           }}
+          >
             {loading ? <Skeleton variant="rectangular"
               width={1150}
-              height={698}>
+              height={698}
+            >
                 <video
                   src="/hero1.mp4"
                   autoPlay
@@ -245,6 +162,95 @@ export default function Hero(props: HeroProps) {
             
           </StyledBox>
         </motion.div>
+
+        <Stack
+          spacing={2}
+          useFlexGap
+          sx={{ alignItems: 'center', width: { xs: '100%', sm: '70%' } }}
+        >
+          <Typography
+            sx={{
+              textAlign: 'center',
+              color: 'text.secondary',
+              width: '100%',
+            }}
+          >
+            Recovering after an ICU stay can be overwhelming, but we&apos;re here to make it simple and seamless. Our virtual care bridges the gap with personalized&nbsp; 
+            <Typography
+              component="span"
+              sx={{
+                color: '#183871',
+                fontWeight: 700,
+              }}
+            >
+              recovery plans, medication reconciliation, and expert follow-up support&nbsp;
+            </Typography>
+            to prevent readmissions and guide you toward lasting health -&nbsp;
+            <Typography
+              component="span"
+              sx={{
+                color: '#183871',
+                fontWeight: 700,
+              }}
+            >
+              all from the comfort of your own home.&nbsp;
+            </Typography>
+          </Typography>
+
+          <Stack
+            direction={{ xs: 'column', sm: 'row' }}
+            spacing={1}
+            useFlexGap
+            sx={{ pt: 2, width: { xs: '100%', sm: '500px' } }}
+          >
+            <InputLabel htmlFor="name-hero" sx={visuallyHidden}>
+              Name
+            </InputLabel>
+            <TextField
+              id="name-hero"
+              hiddenLabel
+              size="small"
+              variant="outlined"
+              aria-label="Enter your Name"
+              placeholder="Your Name"
+              fullWidth
+              slotProps={{
+                htmlInput: {
+                  autoComplete: 'off',
+                  'aria-label': 'Enter your Name',
+                },
+              }}
+            />
+            <InputLabel htmlFor="email-hero" sx={visuallyHidden}>
+              Email
+            </InputLabel>
+            <TextField
+              id="email-hero"
+              hiddenLabel
+              size="small"
+              variant="outlined"
+              aria-label="Enter your email address"
+              placeholder="Your email address"
+              fullWidth
+              slotProps={{
+                htmlInput: {
+                  autoComplete: 'off',
+                  'aria-label': 'Enter your email address',
+                },
+              }}
+            />
+            <Button
+              variant="contained"
+              color="primary"
+              size="small"
+              sx={{ minWidth: 'fit-content' }}
+            >
+              Get Started Today
+            </Button>
+          </Stack>
+          
+        </Stack>
+        
       </Container>
     </Box>
   );
