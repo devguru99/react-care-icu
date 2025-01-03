@@ -186,6 +186,7 @@ export default function Hero(props: HeroProps) {
               recovery plans, medication reconciliation, and expert follow-up support&nbsp;
             </Typography>
             to prevent readmissions and guide you toward lasting health -&nbsp;
+
             <Typography
               component="span"
               sx={{
