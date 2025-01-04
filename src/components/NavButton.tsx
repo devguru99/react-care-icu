@@ -7,7 +7,7 @@ interface NavButtonProps extends ButtonProps {
   children: React.ReactNode;
 }
 
-const NavButton = ({ to, children, ...props }: NavButtonProps) => {
+const NavButton = ({ to, children, sx, ...rest }: NavButtonProps) => {
 
   return (
       <Button
@@ -20,9 +20,10 @@ const NavButton = ({ to, children, ...props }: NavButtonProps) => {
           color: '#183871',
           fontWeight: 'bold',
         },
+        ...sx,
       }}
       to={to}
-      {...props}
+      {...rest}
     >
       {children}
     </Button>

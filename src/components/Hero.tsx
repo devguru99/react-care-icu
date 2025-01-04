@@ -115,16 +115,6 @@ export default function Hero(props: HeroProps) {
           </motion.div>
         </Stack>
 
-        <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 1,
-              delay: 0.1,
-              ease: [0.215, 0.61, 0.355, 1]
-            }}
-          >
           <StyledBox id="video"
             sx={{
               marginTop: '20px !important',
@@ -161,7 +151,6 @@ export default function Hero(props: HeroProps) {
           )}
             
           </StyledBox>
-        </motion.div>
 
         <Stack
           spacing={2}

@@ -74,16 +74,6 @@ export default function Founder(props: FounderProps) {
           useFlexGap
           sx={{ alignItems: 'center', width: '100%' }}
         >
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 1,
-              delay: 0.1,
-              ease: [0.215, 0.61, 0.355, 1]
-            }}
-          >
             <Card
                 sx={[
                   {
@@ -172,7 +162,17 @@ export default function Founder(props: FounderProps) {
                         </Typography>
                       </Typography>
                   </motion.div>
-                  <CardActions sx={{paddingTop:'2rem'}}>
+                <CardActions sx={{ paddingTop: '2rem' }}>
+                <motion.div
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 1,
+                        delay: 0.1,
+                        ease: [0.215, 0.61, 0.355, 1]
+                      }}
+                    >
                     <Typography
                       sx={{
                         textAlign: 'left',
@@ -220,12 +220,12 @@ export default function Founder(props: FounderProps) {
                       <FiberManualRecordIcon fontSize="inherit"/> 3 Years of Fellowship: Rutgers New Jersey Medical School <br />
                       <FiberManualRecordIcon fontSize="inherit"/> Co-author: <i>Rapid Response Events in the Critically Ill</i>
                     </Typography>
+                  </motion.div>
                   </CardActions>
                   </CardContent>
                   </Box>
                
               </Card>
-          </motion.div>
         </Stack>
       </Container>
     </Box>
