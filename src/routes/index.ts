@@ -15,6 +15,11 @@ const routes: Routes = {
     title: 'Home',
     icon: HomeIcon,
   },
+  [Pages.About]: {
+    component: asyncComponentLoader(() => import('@/pages/About')),
+    path: '/about',
+    title: 'About',
+  },
   [Pages.NotFound]: {
     component: asyncComponentLoader(() => import('@/pages/NotFound')),
     path: '/*',

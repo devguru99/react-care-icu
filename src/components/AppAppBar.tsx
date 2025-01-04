@@ -12,6 +12,8 @@ import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import Sitemark from './SitemarkIcon';
+import { NavLink } from 'react-router-dom';
+import NavButton from '@/components/NavButton';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -50,24 +52,14 @@ export default function AppAppBar() {
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
             <Sitemark />
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              <Button variant="text" color="info" size="small">
-                Home
-              </Button>
-              <Button variant="text" color="info" size="small">
-                Services
-              </Button>
-              <Button variant="text" color="info" size="small">
-                About
-              </Button>
-              <Button variant="text" color="info" size="small">
-                Blog
-              </Button>
+              <NavButton to="/">Home</NavButton>
+              <NavButton to="/services">Services</NavButton>
+              <NavButton to="/about">About</NavButton>
+              <NavButton to="/blogs">Blog</NavButton>
               <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
                 Pages
               </Button>
-              <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
-                Contact
-              </Button>
+              <NavButton to="/contact" sx={{ minWidth: 0 }}>Contact</NavButton>
             </Box>
           </Box>
           <Box
@@ -77,7 +69,7 @@ export default function AppAppBar() {
               alignItems: 'center',
             }}
           >
-            <Button color="primary" variant="contained" size="small">
+            <Button component={NavLink} to="/contact" color="primary" variant="contained" size="small">
               Start Now
             </Button>
           </Box>
@@ -107,15 +99,15 @@ export default function AppAppBar() {
                   </IconButton>
                 </Box>
 
-                <MenuItem>Home</MenuItem>
-                <MenuItem>Services</MenuItem>
-                <MenuItem>About</MenuItem>
-                <MenuItem>Blog</MenuItem>
+                <MenuItem component={NavLink} to="/">Home</MenuItem>
+                <MenuItem component={NavLink} to="/services">Services</MenuItem>
+                <MenuItem component={NavLink} to="/about">About</MenuItem>
+                <MenuItem component={NavLink} to="/blogs">Blog</MenuItem>
                 <MenuItem>Pages</MenuItem>
-                <MenuItem>Contact</MenuItem>
+                <MenuItem component={NavLink} to="/contact">Contact</MenuItem>
                 <Divider sx={{ my: 3 }} />
                 <MenuItem>
-                  <Button color="primary" variant="contained" fullWidth>
+                  <Button component={NavLink} to="/contact" color="primary" variant="contained" fullWidth>
                     Start Now
                   </Button>
                 </MenuItem>
