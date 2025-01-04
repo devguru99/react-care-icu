@@ -1,7 +1,6 @@
 import React from 'react';
 import { Box, Typography, Button, Container } from '@mui/material';
 import { motion } from 'framer-motion';
-import { ChevronRight } from '@mui/icons-material';
 
 const backgroundImage = '/about_banner.png';
 

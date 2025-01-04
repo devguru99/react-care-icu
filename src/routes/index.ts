@@ -20,6 +20,11 @@ const routes: Routes = {
     path: '/about',
     title: 'About',
   },
+  [Pages.Contact]: {
+    component: asyncComponentLoader(() => import('@/pages/Contact')),
+    path: '/contact',
+    title: 'Contact',
+  },
   [Pages.NotFound]: {
     component: asyncComponentLoader(() => import('@/pages/NotFound')),
     path: '/*',
