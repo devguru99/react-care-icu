@@ -100,6 +100,10 @@ export function MobileLayout({
             ...theme.applyStyles('dark', {
               backgroundImage: 'var(--items-imageDark)',
             }),
+            transition: 'transform 0.3s ease-in-out',
+            '&:hover': {
+              transform: 'scale(1.05)',
+            },
           })}
           style={
             items[selectedItemIndex]
@@ -213,7 +217,6 @@ export default function Expect() {
               height: '100%',
               width: '100%',
               display: { xs: 'none', sm: 'flex' },
-              pointerEvents: 'none',
               border: 'none',
               backgroundColor: 'inherit'
             }}
@@ -230,6 +233,10 @@ export default function Expect() {
                 ...theme.applyStyles('dark', {
                   backgroundImage: 'var(--items-imageDark)',
                 }),
+                transition: 'transform 0.3s ease-in-out',
+                '&:hover': {
+                  transform: 'scale(1.05)',
+                },
               })}
               style={
                 items[selectedItemIndex]

@@ -107,7 +107,6 @@ export default function Future() {
               height: '100%',
               width: '100%',
               display: 'flex',
-              pointerEvents: 'none',
               border: 'none',
               backgroundColor: 'inherit',
               justifyContent: 'center',
@@ -129,6 +128,10 @@ export default function Future() {
                   sx={{
                     width: 500,
                     height: 350,
+                    transition: 'transform 0.3s ease-in-out',
+                    '&:hover': {
+                      transform: 'scale(1.05)',
+                    },
                   }}
                   alt='Future'
                 />
