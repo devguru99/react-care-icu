@@ -3,9 +3,9 @@ import { Box, Typography, Button, Container } from '@mui/material';
 import { motion } from 'framer-motion';
 import { ChevronRight } from '@mui/icons-material';
 
-const backgroundImage = '/home_banner.png';
+const backgroundImage = '/about_banner.png';
 
-export default function Banner () {
+export default function Reason () {
     return (
         
     <Box
@@ -14,10 +14,10 @@ export default function Banner () {
             backgroundImage: `url(${backgroundImage})`,
             backgroundSize: 'cover',
             color: '#fff',
-            height: 300,
+            height: { xs: '100%', sm: 400 },
         }}
     >
-        <Container id="banner" 
+        <Container id="reason" 
             sx={{
             pt: { xs: 4, sm: 12 },
             pb: { xs: 8, sm: 16 },
@@ -40,12 +40,12 @@ export default function Banner () {
                     }}
                 >
                     <Typography
-                    component="h2"
-                    variant="h3"
-                    gutterBottom
-                    sx={{ color: 'text.primary', fontWeight: 700 , display: 'flex', flexDirection:'row', flexWrap: 'wrap', alignItems: 'center', textAlign: 'center' }}
+                        component="h2"
+                        variant="h3"
+                        gutterBottom
+                        sx={{ color: 'text.primary', fontWeight: 700 , mt: 3, display: 'flex', flexDirection:'row', flexWrap: 'wrap', alignItems: 'center', textAlign: 'center', justifyContent: 'center' }}
                     >
-                        Let&apos;s Take&nbsp;
+                        Why We&nbsp;
                     <Typography
                         component="span"
                         variant="h3"
@@ -60,20 +60,12 @@ export default function Banner () {
                         fontWeight: 700,
                         })}
                     >
-                        This Journey&nbsp;
+                        Do It
                     </Typography>
-                    Together
-                    </Typography>
-                <Button variant="contained"
-                    sx={{
-                        padding: '10px 20px',
-                        fontSize: '1rem',
-                        borderRadius: '8px'
-                    }}
-                    >
-                        Get Started Today
-                        <ChevronRight />
-                </Button>
+                </Typography>
+                <Typography component="h3" variant="h4" sx={{ color: 'text.primary', textAlign: 'center', mt: 3 }}>
+                    The journey home from the ICU can feel overwhelming. Up to 50% of ICU survivors experience challenges like weakness, memory issues, or medication problems—and many are readmitted to the hospital within weeks. We believe everyone deserves personalized care to help them heal, recover, and thrive.
+                </Typography>
             </motion.div>
         </Container>
     </Box>

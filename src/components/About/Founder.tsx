@@ -1,11 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import InputLabel from '@mui/material/InputLabel';
-import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
-import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -13,7 +9,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
-import { visuallyHidden } from '@mui/utils';
 import { styled } from '@mui/material/styles';
 
 // @third-party
@@ -99,18 +94,29 @@ export default function Founder(props: FounderProps) {
                     padding: '0px',
                     borderRadius: '20px',
                     overflow: 'hidden',
+                    boxShadow: '0 0 12px 8px hsla(100, 25%, 80%, 0.2)',   
                   },
                 ]}
             >
-               <CardMedia
+               {loading ? (
+                  <Skeleton 
+                    variant="rectangular" 
+                    width="auto" 
+                    height={700} 
+                    animation="wave" 
+                  />
+              ):(
+                <CardMedia
                   component="img"
-                sx={{ 
-                    width: { xs: '100%', md: 'auto' },
-                    height: { xs: 'auto', md: '700px' },
-                   }}
+                  sx={{ 
+                      width: { xs: '100%', md: 'auto' },
+                      height: { xs: 'auto', md: 'auto' },
+                    }}
                   image="/about_founder.png"
                   alt="Founder"
+                  loading="lazy"
                 />
+                )}
                 <Box
                   sx={[
                     {
@@ -121,7 +127,7 @@ export default function Founder(props: FounderProps) {
                       justifyContent: 'flex-start',
                       alignItems: 'center',
                       gap: 2,
-                      padding: { xs: 2, md: 5 },
+                      padding: { xs: 4, md: 5 },
                     },
                   ]}
                 >
