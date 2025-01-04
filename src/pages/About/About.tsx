@@ -1,8 +1,11 @@
 import * as React from 'react';
 
-import Banner from '@/components/Homepage/Banner';
 import Founder from '@/components/About/Founder';
 import Approach from '@/components/About/Approach';
+import Recovery from '@/components/About/Recovery';
+import Mission from '@/components/About/Mission';
+import Reason from '@/components/About/Reason';
+import Contact from '@/components/About/Contact';
 
 
 export default function AboutPage() {
@@ -10,8 +13,11 @@ export default function AboutPage() {
     <>
       <Founder />
       <div>
+        <Recovery />
+        <Mission />
+        <Reason />
         <Approach />
-        <Banner />
+        <Contact />
       </div>
     </>
       
