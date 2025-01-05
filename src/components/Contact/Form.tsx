@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Button, Container, Card, CardActions, TextField } from '@mui/material';
+import { Box, Typography, Button, Container, Card, CardActions } from '@mui/material';
 import { motion } from 'framer-motion';
 import FormLabel from '@mui/material/FormLabel';
 import Grid from '@mui/material/Grid2';
@@ -21,7 +21,7 @@ export default function Form () {
             display: 'flex',
             backgroundImage: `url(${backgroundImage})`,
             backgroundSize: 'cover',
-            height: { xs: '100%', sm: 750 },
+            height: { xs: '100%', sm: '100%' },
         }}
     >
         <Container id="contactform" 
@@ -304,7 +304,15 @@ export default function Form () {
                     </motion.div>
                     <CardActions sx={{ justifyContent: 'flex-end' }}>
                         <Button color="primary" variant="contained" size="small">
-                            Submit
+                            Submit&nbsp;
+                            <Box
+                                component="img"
+                                src='/submit_vector.png'
+                                sx={{
+                                width: 20,
+                                height: 20,
+                                }}
+                            />
                         </Button>
                     </CardActions>
                 </Card>
