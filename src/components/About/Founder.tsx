@@ -122,46 +122,35 @@ export default function Founder(props: FounderProps) {
                   ]}
                 >
                   <CardContent sx={{ flex: '1 0 auto' }}>
-                    <motion.div
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{
-                        duration: 1,
-                        delay: 0.1,
-                        ease: [0.215, 0.61, 0.355, 1]
-                      }}
+                  <Typography
+                    variant="h1"
+                    sx={{
+                      display: 'flex',
+                      flexDirection: { xs: 'column', sm: 'row' },
+                      flexWrap: 'wrap',
+                      alignItems: 'center',
+                      fontSize: 'clamp(3rem, 10vw, 3.5rem)',
+                      justifyContent: 'flex-start',
+                      textAlign: 'center',
+                      paddingTop: '1rem',
+                    }}
+                  >
+                    Meet the Founder of&nbsp;
+                    <Typography
+                      variant="inherit"
+                      sx={(theme) => ({
+                        fontSize: 'inherit',
+                        background: 'linear-gradient(30deg, #183871, #88D8FF)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        ...theme.applyStyles('dark', {
+                          background: 'linear-gradient(30deg, #183871, #88D8FF)', // Same gradient for dark mode
+                        }),
+                      })}
                     >
-                      <Typography
-                        variant="h1"
-                        sx={{
-                          display: 'flex',
-                          flexDirection: { xs: 'column', sm: 'row' },
-                          flexWrap: 'wrap',
-                          alignItems: 'center',
-                          fontSize: 'clamp(3rem, 10vw, 3.5rem)',
-                          justifyContent: 'flex-start',
-                          textAlign: 'center',
-                          paddingTop: '1rem',
-                        }}
-                      >
-                        Meet the Founder of&nbsp;
-                        <Typography
-                          variant="inherit"
-                          sx={(theme) => ({
-                            fontSize: 'inherit',
-                            background: 'linear-gradient(30deg, #183871, #88D8FF)',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
-                            ...theme.applyStyles('dark', {
-                              background: 'linear-gradient(30deg, #183871, #88D8FF)', // Same gradient for dark mode
-                            }),
-                          })}
-                        >
-                          CareBeyondICU
-                        </Typography>
-                      </Typography>
-                  </motion.div>
+                      CareBeyondICU
+                    </Typography>
+                  </Typography>
                 <CardActions sx={{ paddingTop: '2rem' }}>
                 <motion.div
                       initial={{ opacity: 0, y: 30 }}
