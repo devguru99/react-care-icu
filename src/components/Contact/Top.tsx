@@ -59,24 +59,10 @@ export default function Top() {
                 alignItems: 'center',
                 fontSize: 'clamp(3rem, 10vw, 3.5rem)',
                 justifyContent: 'center',
+                textAlign: 'center',
               }}
             >
-              Contact Us - We&apos;re Here to&nbsp;
-              <Typography
-                variant="inherit"
-                sx={(theme) => ({
-                  fontSize: 'inherit',
-                  background: 'linear-gradient(30deg, #183871, #88D8FF)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  ...theme.applyStyles('dark', {
-                    background: 'linear-gradient(30deg, #183871, #88D8FF)', // Same gradient for dark mode
-                  }),
-                })}
-              >
-                Support
-              </Typography>
-              &nbsp;Your Recovery
+              Contact Us - We&apos;re Here to&nbsp;Support&nbsp;Your Recovery
             </Typography>
           </motion.div>
         </Stack>
