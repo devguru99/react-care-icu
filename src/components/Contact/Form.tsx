@@ -240,16 +240,6 @@ export default function Form () {
                         >
                     If you prefer, you can fill out the form below, and one of our team members will get back to you promptly.
                     </Typography>
-                    <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{
-                        duration: 1,
-                        delay: 0.1,
-                        ease: [0.215, 0.61, 0.355, 1]
-                    }}
-                    >
                     <Grid container spacing={3}>
                         <FormGrid size={{ xs: 12, md: 6 }}>
                         <FormLabel htmlFor="name" required>
@@ -301,7 +291,6 @@ export default function Form () {
                         />
                         </FormGrid>
                     </Grid>
-                    </motion.div>
                     <CardActions sx={{ justifyContent: 'flex-end' }}>
                         <Button color="primary" variant="contained" size="small">
                             Submit&nbsp;

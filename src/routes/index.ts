@@ -1,8 +1,4 @@
-import AddTaskIcon from '@mui/icons-material/AddTask';
-import BugReportIcon from '@mui/icons-material/BugReport';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import HomeIcon from '@mui/icons-material/Home';
-import TerrainIcon from '@mui/icons-material/Terrain';
 
 import asyncComponentLoader from '@/utils/loader';
 
@@ -24,6 +20,11 @@ const routes: Routes = {
     component: asyncComponentLoader(() => import('@/pages/Contact')),
     path: '/contact',
     title: 'Contact',
+  },
+  [Pages.Faq]: {
+    component: asyncComponentLoader(() => import('@/pages/Faq')),
+    path: '/faq',
+    title: 'Faq',
   },
   [Pages.NotFound]: {
     component: asyncComponentLoader(() => import('@/pages/NotFound')),

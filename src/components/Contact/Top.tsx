@@ -40,31 +40,20 @@ export default function Top() {
           useFlexGap
           sx={{ alignItems: 'center', width: { xs: '100%', sm: '70%' } }}
         >
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 1,
-              delay: 0.1,
-              ease: [0.215, 0.61, 0.355, 1]
+          <Typography
+            variant="h1"
+            sx={{
+              display: 'flex',
+              flexDirection: { xs: 'column', sm: 'row' },
+              flexWrap: 'wrap',
+              alignItems: 'center',
+              fontSize: 'clamp(3rem, 10vw, 3.5rem)',
+              justifyContent: 'center',
+              textAlign: 'center',
             }}
           >
-            <Typography
-              variant="h1"
-              sx={{
-                display: 'flex',
-                flexDirection: { xs: 'column', sm: 'row' },
-                flexWrap: 'wrap',
-                alignItems: 'center',
-                fontSize: 'clamp(3rem, 10vw, 3.5rem)',
-                justifyContent: 'center',
-                textAlign: 'center',
-              }}
-            >
-              Contact Us - We&apos;re Here to&nbsp;Support&nbsp;Your Recovery
-            </Typography>
-          </motion.div>
+            Contact Us - We&apos;re Here to&nbsp;Support&nbsp;Your Recovery
+          </Typography>
         </Stack>
 
 

@@ -14,6 +14,10 @@ import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import Sitemark from './SitemarkIcon';
 import { NavLink } from 'react-router-dom';
 import NavButton from '@/components/NavButton';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Menu from '@mui/material/Menu';
+import { ExpandLess } from '@mui/icons-material';
+import { Collapse } from '@mui/material';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -36,6 +40,21 @@ export default function AppAppBar() {
     setOpen(newOpen);
   };
 
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const openMenu = Boolean(anchorEl);
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const [submenuOpen, setSubmenuOpen] = React.useState(false);
+
+  const handleToggleSubmenu = () => {
+    setSubmenuOpen((prev) => !prev);
+  };
+
   return (
     <AppBar
       position="fixed"
@@ -56,9 +75,29 @@ export default function AppAppBar() {
               <NavButton to="/services">Services</NavButton>
               <NavButton to="/about">About</NavButton>
               <NavButton to="/blogs">Blog</NavButton>
-              <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
+              <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}
+                id="demo-customized-button"
+                aria-controls={openMenu ? 'basic-menu' : undefined}
+                aria-haspopup="true"
+                aria-expanded={openMenu ? 'true' : undefined}
+                disableElevation
+                onClick={handleClick}
+                endIcon={openMenu ? <ExpandLess /> : <ExpandMoreIcon />}
+              >
                 Pages
               </Button>
+              <Menu
+                id="basic-menu"
+                anchorEl={anchorEl}
+                open={openMenu}
+                onClose={handleClose}
+                MenuListProps={{
+                  'aria-labelledby': 'basic-button',
+                }}
+              >
+                <MenuItem component={NavLink} to="/story" onClick={handleClose}>Testimonials & Success Stories</MenuItem>
+                <MenuItem component={NavLink} to="/faq" onClick={handleClose}>FAQ</MenuItem>
+              </Menu>
               <NavButton to="/contact" sx={{ minWidth: 0 }}>Contact</NavButton>
             </Box>
           </Box>
@@ -103,7 +142,20 @@ export default function AppAppBar() {
                 <MenuItem component={NavLink} to="/services">Services</MenuItem>
                 <MenuItem component={NavLink} to="/about">About</MenuItem>
                 <MenuItem component={NavLink} to="/blogs">Blog</MenuItem>
-                <MenuItem>Pages</MenuItem>
+                <Box>
+                  <MenuItem onClick={handleToggleSubmenu} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    Pages
+                    {submenuOpen ? <ExpandLess /> : <ExpandMoreIcon />}
+                  </MenuItem>
+                  <Collapse in={submenuOpen} timeout="auto" unmountOnExit>
+                    <MenuItem component={NavLink} to="/story" onClick={handleClose} sx={{ pl: 4 }}>
+                      Testimonials & Success Stories
+                    </MenuItem>
+                    <MenuItem component={NavLink} to="/faq" onClick={handleClose} sx={{ pl: 4 }}>
+                      FAQ
+                    </MenuItem>
+                  </Collapse>
+                </Box>
                 <MenuItem component={NavLink} to="/contact">Contact</MenuItem>
                 <Divider sx={{ my: 3 }} />
                 <MenuItem>
