@@ -10,11 +10,4 @@ Promise.all([import('@/Root'), import('@/App')]).then(([{ default: render }, { d
   render(App);
 });
 
-// Register the service worker
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js', { scope: '/' })
-  })
-}
-
 export {};
