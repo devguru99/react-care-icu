@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Button, Container } from '@mui/material';
+import { Box, Typography, Button, Container, Stack, TextField } from '@mui/material';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -17,7 +17,7 @@ export default function Banner () {
             height: 300,
         }}
     >
-        <Container id="faq-banner" 
+        <Container id="blogs-banner" 
             sx={{
             pt: { xs: 4, sm: 12 },
             pb: { xs: 8, sm: 16 },
@@ -45,37 +45,44 @@ export default function Banner () {
                     gutterBottom
                     sx={{ color: 'text.primary', fontWeight: 700 , display: 'flex', flexDirection:'row', flexWrap: 'wrap', alignItems: 'center', textAlign: 'center' }}
                     >
-                        Still Have Questions?
+                        Stay Connected
                     </Typography>
                     <Typography
                         sx={{
                             textAlign: 'left',
                             color: 'text.secondary',
                             width: '70%',
+                            mb: 2,
                         }}
                     >
-                    If you have a question that isn&apos;t answered here, don&apos;t hesitate to reach out to us. Our team is always ready to help and guide you through your recovery process.
+                    Want to stay updated with new posts and tips for your recovery journey? Subscribe to our newsletter and never miss an article!
                     </Typography>
-                <Button
-                    variant="contained"
-                    color="primary"
-                    size="small"
-                    component={Link}
-                    to="/contact"
-                    sx={{ flexShrink: 0, mr: 2, mt: 2 }}
-                >
-                Book a Consultation Now
-                </Button>
-                <Button
-                    variant="contained"
-                    color="primary"
-                    size="small"
-                    component={Link}
-                    to="/contact"
-                    sx={{ flexShrink: 0, mt: 2 }}
-                >
-                Contact Us
-                </Button>
+                <Stack direction="row" spacing={1} useFlexGap>
+                    <TextField
+                        id="email-newsletter"
+                        hiddenLabel
+                        size="small"
+                        variant="outlined"
+                        fullWidth
+                        aria-label="Enter your email address"
+                        placeholder="Your email address"
+                        slotProps={{
+                        htmlInput: {
+                            autoComplete: 'off',
+                            'aria-label': 'Enter your email address',
+                        },
+                        }}
+                        sx={{ width: '250px' }}
+                    />
+                    <Button
+                        variant="contained"
+                        color="primary"
+                        size="small"
+                        sx={{ flexShrink: 0 }}
+                    >
+                        Subscribe
+                    </Button>
+                </Stack>
             </motion.div>
         </Container>
     </Box>

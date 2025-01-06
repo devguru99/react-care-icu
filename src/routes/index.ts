@@ -26,6 +26,11 @@ const routes: Routes = {
     path: '/faq',
     title: 'Faq',
   },
+  [Pages.Blogs]: {
+    component: asyncComponentLoader(() => import('@/pages/Blogs')),
+    path: '/blogs',
+    title: 'Blogs',
+  },
   [Pages.NotFound]: {
     component: asyncComponentLoader(() => import('@/pages/NotFound')),
     path: '/*',
