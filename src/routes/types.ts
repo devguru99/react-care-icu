@@ -8,6 +8,7 @@ enum Pages {
   About,
   Contact,
   Faq,
+  Blogs,
   NotFound,
 }
 
