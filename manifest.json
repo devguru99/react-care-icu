@@ -3,7 +3,6 @@
   "short_name": "careicu",
   "description": "Frontend React PWA for the Care Beyond ICU project",
   "theme_color": "#ffffff",
-  "display": "standalone",
   "scope": "/",
   "start_url": "/",
   "icons": [
