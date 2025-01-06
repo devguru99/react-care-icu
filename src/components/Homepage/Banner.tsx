@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Typography, Button, Container } from '@mui/material';
 import { motion } from 'framer-motion';
 import { ChevronRight } from '@mui/icons-material';
+import { NavLink } from 'react-router-dom';
 
 const backgroundImage = '/home_banner.png';
 
@@ -65,6 +66,8 @@ export default function Banner () {
                     Together
                     </Typography>
                 <Button variant="contained"
+                    component={NavLink} 
+                    to="/contact"
                     sx={{
                         padding: '10px 20px',
                         fontSize: '1rem',

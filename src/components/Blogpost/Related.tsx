@@ -8,16 +8,12 @@ import CardMedia from '@mui/material/CardMedia';
 import Chip from '@mui/material/Chip';
 import Grid from '@mui/material/Grid2';
 import Typography from '@mui/material/Typography';
-import FormControl from '@mui/material/FormControl';
-import InputAdornment from '@mui/material/InputAdornment';
-import OutlinedInput from '@mui/material/OutlinedInput';
 import { styled } from '@mui/material/styles';
-import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import Container from '@mui/material/Container';
+import Stack from '@mui/material/Stack';
 import blogsData from '@/utils/blogs';
 import { Link } from 'react-router-dom';
-
-const cardData = blogsData.slice(2, 6);
+import { useParams } from 'react-router-dom';
 
 const StyledCard = styled(Card)(({ theme }) => ({
   display: 'flex',
@@ -111,6 +107,16 @@ interface CardComponentProps {
   cardIndex: number;
 }
 
+const getRandomItemsExcludingSlug = (
+  array: CardData[],
+  count: number,
+  excludeSlug: string
+): CardData[] => {
+  const filteredArray = array.filter((item) => item.slug !== excludeSlug);
+  const shuffled = [...filteredArray].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
+};
+
 const CardComponent: React.FC<CardComponentProps> = ({
   card,
   isFocused,
@@ -130,9 +136,8 @@ const CardComponent: React.FC<CardComponentProps> = ({
       alt={card.title}
       image={card.img}
       sx={{
-        aspectRatio: '16 / 9',
-        borderBottom: '1px solid',
-        borderColor: 'divider',
+        height: { sm: 'auto', md: '50%' },
+        aspectRatio: { sm: '16 / 9', md: '' },
       }}
     />
     <StyledCardContent>
@@ -150,31 +155,15 @@ const CardComponent: React.FC<CardComponentProps> = ({
   </StyledCard>
 );
 
-export function Search() {
-  return (
-    <FormControl sx={{ width: { xs: '100%', md: '25ch' } }} variant="outlined">
-      <OutlinedInput
-        size="small"
-        id="search"
-        placeholder="Search…"
-        sx={{ flexGrow: 1 }}
-        startAdornment={
-          <InputAdornment position="start" sx={{ color: 'text.primary' }}>
-            <SearchRoundedIcon fontSize="small" />
-          </InputAdornment>
-        }
-        inputProps={{
-          'aria-label': 'search',
-        }}
-      />
-    </FormControl>
-  );
-}
-
-export default function Latest() {
+export default function Related() {
   const [focusedCardIndex, setFocusedCardIndex] = React.useState<number | null>(
     null,
   );
+  const { slug } = useParams<{ slug: string }>();
+
+  const cardData = React.useMemo(() => {
+    return getRandomItemsExcludingSlug(blogsData, 3, slug || '');
+  }, [blogsData, slug]);
 
   const handleFocus = (index: number) => {
     setFocusedCardIndex(index);
@@ -190,7 +179,7 @@ export default function Latest() {
 
   return (
     <Container
-        id="blogs-latest"
+        id="blogs-related"
         maxWidth="lg"
         component="main"
         sx={{ display: 'flex', flexDirection: 'column', my: 10, gap: 4 }}
@@ -198,7 +187,7 @@ export default function Latest() {
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
         <div>
           <Typography variant="h1" gutterBottom>
-            Latest Articles
+            Related Articles
           </Typography>
         </div>
         <Box
@@ -212,75 +201,10 @@ export default function Latest() {
             overflow: 'auto',
           }}
         >
-          <Box
-            sx={{
-              display: 'inline-flex',
-              flexDirection: 'row',
-              gap: 1,
-              overflow: 'auto',
-            }}
-          >
-            <Chip onClick={handleClick} size="medium" label="All" />
-            <Chip
-              onClick={handleClick}
-              size="medium"
-              label="Post-ICU Recovery"
-              sx={{
-                backgroundColor: 'transparent',
-                border: 'none',
-              }}
-            />
-            <Chip
-              onClick={handleClick}
-              size="medium"
-              label="Medication Management"
-              sx={{
-                backgroundColor: 'transparent',
-                border: 'none',
-              }}
-            />
-            <Chip
-              onClick={handleClick}
-              size="medium"
-              label="Telehealth and Virtual Care"
-              sx={{
-                backgroundColor: 'transparent',
-                border: 'none',
-              }}
-            />
-            <Chip
-              onClick={handleClick}
-              size="medium"
-              label="Mental and Emotional Health"
-              sx={{
-                backgroundColor: 'transparent',
-                border: 'none',
-              }}
-            />
-            <Chip
-              onClick={handleClick}
-              size="medium"
-              label="Patient Resources"
-              sx={{
-                backgroundColor: 'transparent',
-                border: 'none',
-              }}
-            />
-          </Box>
-          <Box
-            sx={{
-              display: { xs: 'none', sm: 'flex' },
-              flexDirection: 'row',
-              gap: 1,
-              width: { xs: '100%', md: 'fit-content' },
-              overflow: 'auto',
-            }}
-          >
-          </Box>
         </Box>
         <Grid container spacing={2} columns={12}>
           {cardData.map((card, index) => (
-            <Grid key={index} size={{ xs: 12, md: 6 }}>
+            <Grid key={index} size={{ xs: 12, md: 4 }}>
               <Link to={`/blog/${card.slug}`} style={{ textDecoration: 'none' }}>
                 <CardComponent
                   card={card}
@@ -293,6 +217,45 @@ export default function Latest() {
             </Grid>
           ))}
         </Grid>
+        <Stack
+          direction={{ xs: 'row', sm: 'row' }}
+          spacing={1}
+          useFlexGap
+          sx={{ width: { xs: '100%', sm: 'auto' }, justifyContent: 'flex-end' }}
+        >
+          <Box
+            component="img"
+            src='/social_facebook.png'
+            sx={{
+            width: 35,
+            height: 35,
+            }}
+          />
+          <Box
+            component="img"
+            src='/social_twitter.png'
+            sx={{
+            width: 35,
+            height: 35,
+            }}
+          />
+          <Box
+            component="img"
+            src='/social_instagram.png'
+            sx={{
+            width: 35,
+            height: 35,
+            }}
+          />
+          <Box
+            component="img"
+            src='/social_linkedin.png'
+            sx={{
+            width: 35,
+            height: 35,
+            }}
+          />
+        </Stack>
       </Box>
     </Container>
   );

@@ -9,6 +9,7 @@ enum Pages {
   Contact,
   Faq,
   Blogs,
+  Blog,
   NotFound,
 }
 

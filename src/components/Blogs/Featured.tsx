@@ -15,6 +15,7 @@ import { styled } from '@mui/material/styles';
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import Container from '@mui/material/Container';
 import blogsData from '@/utils/blogs';
+import { Link } from 'react-router-dom';
 
 const cardData = blogsData.slice(0, 2);
 
@@ -97,6 +98,7 @@ interface CardData {
   img: string;
   tag: string;
   title: string;
+  slug: string;
   description: string;
   authors: AuthorType[];
 }
@@ -212,13 +214,15 @@ export default function Featured() {
       <Grid container spacing={2} columns={12}>
         {cardData.map((card, index) => (
           <Grid key={index} size={{ xs: 12, md: 6 }}>
-            <CardComponent
-              card={card}
-              isFocused={focusedCardIndex === index}
-              handleFocus={handleFocus}
-              handleBlur={handleBlur}
-              cardIndex={index}
-            />
+            <Link to={`/blog/${card.slug}`} style={{ textDecoration: 'none' }}>
+              <CardComponent
+                card={card}
+                isFocused={focusedCardIndex === index}
+                handleFocus={handleFocus}
+                handleBlur={handleBlur}
+                cardIndex={index}
+              />
+            </Link>
           </Grid>
         ))}
       </Grid>

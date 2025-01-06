@@ -8,10 +8,11 @@ import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
-import FacebookIcon from '@mui/icons-material/GitHub';
+import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/X';
 import SitemarkIcon from './SitemarkIcon';
+import { Instagram } from '@mui/icons-material';
 
 function Copyright() {
   return (
@@ -98,23 +99,23 @@ export default function Footer() {
             gap: 1,
           }}
         >
-          <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
-            Product
+          <Typography variant="body2" sx={{ fontWeight: 'bold', color: '#183871' }}>
+            Get to know Us
           </Typography>
-          <Link color="text.secondary" variant="body2" href="#">
-            Features
+          <Link href='/contact' color="text.secondary" variant="body2">
+            Get Started
           </Link>
-          <Link color="text.secondary" variant="body2" href="#">
-            Testimonials
+          <Link href='/faq' color="text.secondary" variant="body2">
+            FAQS
           </Link>
-          <Link color="text.secondary" variant="body2" href="#">
-            Highlights
+          <Link href='/blogs' color="text.secondary" variant="body2">
+            Blogs
           </Link>
-          <Link color="text.secondary" variant="body2" href="#">
-            Pricing
+          <Link href='/story' color="text.secondary" variant="body2">
+            Stories
           </Link>
-          <Link color="text.secondary" variant="body2" href="#">
-            FAQs
+          <Link href='/about' color="text.secondary" variant="body2">
+            About Us
           </Link>
         </Box>
         <Box
@@ -124,17 +125,17 @@ export default function Footer() {
             gap: 1,
           }}
         >
-          <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
-            Company
+          <Typography variant="body2" sx={{ fontWeight: 'bold', color: '#183871' }}>
+            Our Services
           </Typography>
-          <Link color="text.secondary" variant="body2" href="#">
-            About us
+          <Link color="text.secondary" variant="body2" href="/contact">
+            Booking appointments
           </Link>
-          <Link color="text.secondary" variant="body2" href="#">
-            Careers
+          <Link color="text.secondary" variant="body2" href="/services">
+            Services
           </Link>
-          <Link color="text.secondary" variant="body2" href="#">
-            Press
+          <Link color="text.secondary" variant="body2" href="/contact">
+            Report an issue
           </Link>
         </Box>
         <Box
@@ -144,16 +145,13 @@ export default function Footer() {
             gap: 1,
           }}
         >
-          <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
-            Legal
+          <Typography variant="body2" sx={{ fontWeight: 'bold', color: '#183871' }}>
+            Let Us Help
           </Typography>
-          <Link color="text.secondary" variant="body2" href="#">
-            Terms
+          <Link color="text.secondary" variant="body2" href="tel:+17327249644">
+            (732) 724-9644
           </Link>
-          <Link color="text.secondary" variant="body2" href="#">
-            Privacy
-          </Link>
-          <Link color="text.secondary" variant="body2" href="#">
+          <Link color="text.secondary" variant="body2" href="/contact">
             Contact
           </Link>
         </Box>
@@ -189,8 +187,8 @@ export default function Footer() {
           <IconButton
             color="inherit"
             size="small"
-            href="https://github.com/mui"
-            aria-label="GitHub"
+            href="https://www.facebook.com/"
+            aria-label="Facebook"
             sx={{ alignSelf: 'center' }}
           >
             <FacebookIcon />
@@ -198,7 +196,16 @@ export default function Footer() {
           <IconButton
             color="inherit"
             size="small"
-            href="https://x.com/MaterialUI"
+            href="https://www.instagram.com/"
+            aria-label="Instagram"
+            sx={{ alignSelf: 'center' }}
+          >
+            <Instagram />
+          </IconButton>
+          <IconButton
+            color="inherit"
+            size="small"
+            href="https://x.com/"
             aria-label="X"
             sx={{ alignSelf: 'center' }}
           >
@@ -207,7 +214,7 @@ export default function Footer() {
           <IconButton
             color="inherit"
             size="small"
-            href="https://www.linkedin.com/company/mui/"
+            href="https://www.linkedin.com/company/"
             aria-label="LinkedIn"
             sx={{ alignSelf: 'center' }}
           >

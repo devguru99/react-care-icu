@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import { motion } from 'framer-motion';
 import { Button } from '@mui/material';
 import { ChevronRight } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 
 export default function Recovery() {
@@ -109,6 +110,8 @@ export default function Recovery() {
                 }}
           >
             <Button variant="contained"
+              component={Link} 
+              to="/contact"
               sx={{
                   padding: '10px 20px',
                   fontSize: '1rem',
