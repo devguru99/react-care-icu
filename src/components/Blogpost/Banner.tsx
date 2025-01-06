@@ -59,7 +59,7 @@ export default function Banner () {
                     </Typography>
                 <Stack direction="row" spacing={1} useFlexGap>
                     <TextField
-                        id="email-newsletter-blogs"
+                        id="email-newsletter-blogpost"
                         hiddenLabel
                         size="small"
                         variant="outlined"

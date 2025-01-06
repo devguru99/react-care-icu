@@ -14,6 +14,7 @@ import { styled } from '@mui/material/styles';
 // @third-party
 import { motion } from 'framer-motion';
 import { Skeleton } from '@mui/material';
+import { NavLink } from 'react-router-dom';
 
 interface HeroProps {
   loading?: boolean;
@@ -230,6 +231,8 @@ export default function Hero(props: HeroProps) {
               }}
             />
             <Button
+              component={NavLink} 
+              to="/contact"
               variant="contained"
               color="primary"
               size="small"

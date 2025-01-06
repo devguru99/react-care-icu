@@ -9,10 +9,13 @@ import Box from '@mui/material/Box';
 import { motion } from 'framer-motion';
 import { ArrowUpward } from '@mui/icons-material';
 
+import { useLocation } from 'react-router-dom';
+
 /***************************  COMMON - SCROLL TO TOP BUTTON  ***************************/
 
 export default function ScrollFab(): React.JSX.Element {
   const [isVisible, setIsVisible] = useState<boolean>(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     // if the user scrolls down, show the button
@@ -24,6 +27,10 @@ export default function ScrollFab(): React.JSX.Element {
     // remove event listener on component unmount
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  }, [pathname]);
 
   // handles the animation when scrolling to the top
   const scrollToTop = (): void => {
