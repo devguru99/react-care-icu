@@ -4,7 +4,7 @@ import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import manifest from './manifest.json';
 
-const VITE_BASE_PATH = './';
+const VITE_BASE_PATH = '/';
 // https://vitejs.dev/config/
 export default defineConfig({
   base: VITE_BASE_PATH, // Set the base path to your repo name
