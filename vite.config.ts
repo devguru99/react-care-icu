@@ -15,9 +15,11 @@ export default defineConfig({
     react(),
     VitePWA({
       manifest,
+      injectRegister: 'auto',
       includeAssets: ['favicon.svg', 'favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
       // switch to "true" to enable sw on development
       devOptions: {
+        navigateFallbackAllowlist: [/^index.html$/],
         enabled: false,
       },
       workbox: {
