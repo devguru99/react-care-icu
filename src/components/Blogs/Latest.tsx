@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { JSX } from 'react';
 import Avatar from '@mui/material/Avatar';
 import AvatarGroup from '@mui/material/AvatarGroup';
 import Box from '@mui/material/Box';
@@ -99,7 +100,7 @@ interface CardData {
   tag: string;
   title: string;
   slug: string;
-  description: string;
+  description: string | JSX.Element;
   authors: AuthorType[];
 }
 

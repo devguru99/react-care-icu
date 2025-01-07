@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { JSX } from 'react';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
@@ -48,7 +49,7 @@ export default function SingleBlog() {
     tag: string;
     title: string;
     slug: string;
-    description: string;
+    description: string | JSX.Element;
     authors: { name: string; avatar: string }[];
   } | null>(null);
 
