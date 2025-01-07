@@ -17,7 +17,6 @@ function Author({ authors }: { authors: { name: string; avatar: string }[] }) {
         gap: 2,
         alignItems: 'center',
         justifyContent: 'space-between',
-        padding: '16px',
       }}
     >
       <Box
