@@ -95,6 +95,7 @@ export default function AppAppBar() {
                   'aria-labelledby': 'basic-button',
                 }}
               >
+                <MenuItem component={NavLink} to="/resource" onClick={handleClose}>Resources</MenuItem>
                 <MenuItem component={NavLink} to="/story" onClick={handleClose}>Testimonials & Success Stories</MenuItem>
                 <MenuItem component={NavLink} to="/faq" onClick={handleClose}>FAQ</MenuItem>
               </Menu>
@@ -148,6 +149,9 @@ export default function AppAppBar() {
                     {submenuOpen ? <ExpandLess /> : <ExpandMoreIcon />}
                   </MenuItem>
                   <Collapse in={submenuOpen} timeout="auto" unmountOnExit>
+                    <MenuItem component={NavLink} to="/resource" onClick={handleClose} sx={{ pl: 4 }}>
+                      Resources
+                    </MenuItem>
                     <MenuItem component={NavLink} to="/story" onClick={handleClose} sx={{ pl: 4 }}>
                       Testimonials & Success Stories
                     </MenuItem>

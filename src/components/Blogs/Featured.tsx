@@ -84,7 +84,7 @@ function Author({ authors }: { authors: { name: string; avatar: string }[] }) {
           {authors.map((author) => author.name).join(', ')}
         </Typography>
       </Box>
-      <Typography variant="caption">July 14, 2021</Typography>
+      <Typography variant="caption">July 14, 2024</Typography>
     </Box>
   );
 }
