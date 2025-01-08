@@ -64,38 +64,66 @@ export default function Social() {
               useFlexGap
               sx={{ width: { xs: '100%', sm: 'auto' } }}
             >
-              <Box
-                component="img"
-                src='/social_facebook.png'
-                sx={{
-                width: 35,
-                height: 35,
-                }}
-              />
-              <Box
-                component="img"
-                src='/social_twitter.png'
-                sx={{
-                width: 35,
-                height: 35,
-                }}
-              />
-              <Box
-                component="img"
-                src='/social_instagram.png'
-                sx={{
-                width: 35,
-                height: 35,
-                }}
-              />
-              <Box
-                component="img"
-                src='/social_linkedin.png'
-                sx={{
-                width: 35,
-                height: 35,
-                }}
-              />
+              <a
+                href="https://www.facebook.com/share/19xRmWeq7p/?mibextid=wwXIfr"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Box
+                  component="img"
+                  src='/social_facebook.png'
+                  sx={{
+                  width: 35,
+                  height: 35,
+                  }}
+                />
+              </a>
+              <a
+                href="https://x.com/carebeyondicu?s=21"
+                aria-label="Twitter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Box
+                  component="img"
+                  src='/social_twitter.png'
+                  sx={{
+                  width: 35,
+                  height: 35,
+                  }}
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/carebeyondicu/"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Box
+                  component="img"
+                  src='/social_instagram.png'
+                  sx={{
+                  width: 35,
+                  height: 35,
+                  }}
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/carebeyondicu/"
+                aria-label="Linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Box
+                  component="img"
+                  src='/social_linkedin.png'
+                  sx={{
+                  width: 35,
+                  height: 35,
+                  }}
+                />
+              </a>
             </Stack>
           </Stack>
           <Typography

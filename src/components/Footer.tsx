@@ -187,7 +187,7 @@ export default function Footer() {
           <IconButton
             color="inherit"
             size="small"
-            href="https://www.facebook.com/"
+            href="https://www.facebook.com/share/19xRmWeq7p/?mibextid=wwXIfr"
             aria-label="Facebook"
             sx={{ alignSelf: 'center' }}
           >
@@ -196,7 +196,7 @@ export default function Footer() {
           <IconButton
             color="inherit"
             size="small"
-            href="https://www.instagram.com/"
+            href="https://www.instagram.com/carebeyondicu/"
             aria-label="Instagram"
             sx={{ alignSelf: 'center' }}
           >
@@ -205,7 +205,7 @@ export default function Footer() {
           <IconButton
             color="inherit"
             size="small"
-            href="https://x.com/"
+            href="https://x.com/carebeyondicu?s=21"
             aria-label="X"
             sx={{ alignSelf: 'center' }}
           >
@@ -214,7 +214,7 @@ export default function Footer() {
           <IconButton
             color="inherit"
             size="small"
-            href="https://www.linkedin.com/company/"
+            href="https://www.linkedin.com/company/carebeyondicu/"
             aria-label="LinkedIn"
             sx={{ alignSelf: 'center' }}
           >

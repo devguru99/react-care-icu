@@ -2,7 +2,7 @@
   "name": "care-beyond-icu",
   "private": true,
   "version": "0.1.0",
-  "homepage": "https://devguru99.github.io/react-care-icu/",
+  "homepage": "https://www.carebeyondicu.com/",
   "type": "module",
   "scripts": {
     "deploy": "gh-pages -d dist",

@@ -2,11 +2,11 @@ import isMobile from '@/utils/is-mobile';
 
 import type { Notifications } from './types';
 
-const title = 'React PWA';
+const title = 'Care Beyond ICU - A Virtual Road To Recovery';
 
-const email = 'auther-email@gmail.com';
+const email = 'admin@carebeyondicu.com';
 
-const repository = 'https://github.com/suren-atoyan/react-pwa';
+const repository = 'https://github.com/';
 
 const messages = {
   app: {
@@ -47,8 +47,8 @@ const loader = {
 };
 
 const defaultMetaTags = {
-  image: '/cover.png',
-  description: 'Starter kit for modern web applications',
+  image: '/logo.png',
+  description: 'Recovering after an ICU stay? Care Beyond ICU offers virtual medical care to ensure a smooth recovery with personalized plans, medication support, and follow-ups.',
 };
 const giphy404 = 'https://giphy.com/embed/xTiN0L7EW5trfOvEk0';
 
