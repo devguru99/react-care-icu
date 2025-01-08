@@ -1,5 +1,5 @@
 import * as React from 'react';
-
+import Meta from '@/components/Meta';
 import Founder from '@/components/About/Founder';
 import Approach from '@/components/About/Approach';
 import Recovery from '@/components/About/Recovery';
@@ -11,6 +11,7 @@ import Contact from '@/components/About/Contact';
 export default function AboutPage() {
   return (
     <>
+      <Meta title="About" />
       <Founder />
       <div>
         <Recovery />
