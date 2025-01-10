@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-disallow: /downloads/
 Sitemap: https://www.carebeyondicu.com/sitemap.xml
