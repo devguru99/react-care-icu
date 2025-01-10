@@ -11,7 +11,7 @@ const FormGrid = styled(Grid)(() => ({
   flexDirection: 'column',
 }));
 
-const backgroundImage = '/contact_form.png';
+const backgroundImage = '/contact_form.webp';
 
 export default function Form () {
     return (

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { ChevronRight } from '@mui/icons-material';
 import { NavLink } from 'react-router-dom';
 
-const backgroundImage = '/home_banner.png';
+const backgroundImage = '/home_banner.webp';
 
 export default function Banner () {
     return (

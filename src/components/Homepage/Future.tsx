@@ -124,7 +124,7 @@ export default function Future() {
             >
               <Box
                   component="img"
-                  src='/home_future.png'
+                  src='/home_future.webp'
                   sx={{
                     width: {xs: '100%', md:'500'},
                     height: {xs: 'auto', md:'350'},

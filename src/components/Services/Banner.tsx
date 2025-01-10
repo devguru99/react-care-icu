@@ -3,7 +3,7 @@ import { Box, Typography, Button, Container } from '@mui/material';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-const backgroundImage = '/banner.png';
+const backgroundImage = '/banner.webp';
 
 export default function Banner () {
     return (
