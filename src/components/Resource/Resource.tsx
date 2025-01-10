@@ -242,7 +242,7 @@ export default function Resources() {
                     {tier.feature.map((line) => (
                       <Box
                         key={line}
-                        sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}
+                        sx={{ display: 'flex', gap: 1.5, alignItems: 'flex-start' }}
                       >
                         <GppGoodOutlinedIcon
                           sx={[
