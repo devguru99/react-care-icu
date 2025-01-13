@@ -73,7 +73,7 @@ export default function Hero(props: HeroProps) {
         <Stack
           spacing={2}
           useFlexGap
-          sx={{ alignItems: 'center', width: { xs: '100%', sm: '70%' } }}
+          sx={{ alignItems: 'center', width: { xs: '100%', sm: '100%' } }}
         >
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -92,11 +92,11 @@ export default function Hero(props: HeroProps) {
                 flexDirection: { xs: 'column', sm: 'row' },
                 flexWrap: 'wrap',
                 alignItems: 'center',
+                textAlign: 'center',
                 fontSize: 'clamp(3rem, 10vw, 3.5rem)',
                 justifyContent: 'center',
               }}
             >
-              Your&nbsp;
               <Typography
                 variant="inherit"
                 sx={(theme) => ({
@@ -109,9 +109,9 @@ export default function Hero(props: HeroProps) {
                   }),
                 })}
               >
-                Partner
+                Care Beyond ICU
               </Typography>
-              &nbsp;in Recovery
+              &nbsp;A Virtual Road To Recovery
             </Typography>
           </motion.div>
         </Stack>
@@ -165,7 +165,7 @@ export default function Hero(props: HeroProps) {
               width: '100%',
             }}
           >
-            Recovering after an ICU stay can be overwhelming, but we&apos;re here to make it simple and seamless. Our virtual care bridges the gap with personalized&nbsp; 
+            At Care Beyond ICU, we believe recovery doesn&apos;t end when you leave the hospital. That&apos;s why&nbsp; 
             <Typography
               component="span"
               sx={{
@@ -173,10 +173,9 @@ export default function Hero(props: HeroProps) {
                 fontWeight: 700,
               }}
             >
-              recovery plans, medication reconciliation, and expert follow-up support&nbsp;
+              we provide a range of personalized services designed to meet your unique needs and guide you toward a full and healthy recovery.&nbsp;
             </Typography>
-            to prevent readmissions and guide you toward lasting health -&nbsp;
-
+            Our team works closely with you to create a customized care plan, focusing on&nbsp;
             <Typography
               component="span"
               sx={{
@@ -184,8 +183,39 @@ export default function Hero(props: HeroProps) {
                 fontWeight: 700,
               }}
             >
-              all from the comfort of your own home.&nbsp;
+              your long-term health and well-being.&nbsp;
             </Typography>
+            By offering tailored support and ongoing follow-up, we aim to help&nbsp;
+            <Typography
+              component="span"
+              sx={{
+                color: '#183871',
+                fontWeight: 700,
+              }}
+            >
+              you regain your strength and prevent unnecessary ICU readmissions.&nbsp;
+            </Typography>
+            With Care Beyond ICU, you can move forward with confidence, knowing you have&nbsp;
+            <Typography
+              component="span"
+              sx={{
+                color: '#183871',
+                fontWeight: 700,
+              }}
+            >
+              a trusted partner in your journey to recovery.&nbsp;
+            </Typography>
+            Helping you&nbsp;
+            <Typography
+              component="span"
+              sx={{
+                color: '#183871',
+                fontWeight: 700,
+              }}
+            >
+              recover, rebuild, and thrive.&nbsp;
+            </Typography>
+            Recovery doesn&apos;t end at discharge—it&apos;s where it begins.
           </Typography>
 
           <Stack

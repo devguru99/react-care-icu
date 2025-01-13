@@ -33,9 +33,4 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  server: {
-    headers: {
-      'x-robots-tag': 'index, follow',
-    },
-  },
 });
