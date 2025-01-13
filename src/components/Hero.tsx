@@ -156,7 +156,7 @@ export default function Hero(props: HeroProps) {
         <Stack
           spacing={2}
           useFlexGap
-          sx={{ alignItems: 'center', width: { xs: '100%', sm: '70%' } }}
+          sx={{ alignItems: 'center', width: { xs: '100%', sm: '90%' } }}
         >
           <Typography
             sx={{
