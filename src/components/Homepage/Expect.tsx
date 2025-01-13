@@ -14,20 +14,53 @@ const items = [
   {
     icon: '/expect_1.png',
     title: 'Help you manage your medications safely.',
-    imageLight: `url("/expect_p_1.png")`,
-    imageDark: `url("/expect_p_1.png")`,
+    imageLight: `url("/expect_p_1.webp")`,
+    imageDark: `url("/expect_p_1.webp")`,
+    desc: (
+      <>
+      • Review all your medications to ensure safety and effectiveness.<br />
+      • Prevent errors like duplications or harmful interactions.<br />
+      • Reconcile prescriptions after discharge for accuracy.<br />
+      • Explain medication use, doses, and side effects clearly.<br />
+      • Adjust medications as needed during follow-ups.<br />
+      • Simplify complex medication schedules.<br />
+      • Coordinate care with your healthcare team.<br />
+      • Provide on-call support for any medication concerns.
+      </>
+    )
   },
   {
     icon: '/expect_2.png',
     title: 'Check on your progress and recommend next steps.',
-    imageLight: `url("/expect_p_2.png")`,
-    imageDark: `url("/expect_p_2.png")`,
+    imageLight: `url("/expect_p_2.webp")`,
+    imageDark: `url("/expect_p_2.webp")`,
+    desc: (
+      <>
+      • Conduct regular virtual check-ins to monitor your recovery.<br />
+      • Track symptoms and address any new or ongoing issues.<br />
+      • Screen for Post-Intensive Care Syndrome (PICS) symptoms.<br />
+      • Review medications and make adjustments as needed.<br />
+      • Monitor lab results and tests to assess your health.<br />
+      • Communicate with your primary care doctor and specialists to align care.<br />
+      • Involve family members or caregivers in your recovery process.<br />
+      • Provide clear next steps, like therapy, lifestyle changes, or specialist referrals.
+      </>
+    )
   },
   {
     icon: '/expect_3.png',
     title: 'Teach you about your health and what to watch for.',
-    imageLight: `url("/expect_p_3.png")`,
-    imageDark: `url("/expect_p_3.png")`,
+    imageLight: `url("/expect_p_3.webp")`,
+    imageDark: `url("/expect_p_3.webp")`,
+    desc: (
+      <>
+      • Explain your condition and recovery process in simple terms.<br />
+      • Provide clear guidance on symptoms to watch for and when to seek help.<br />
+      • Share tips for managing your health and preventing complications.<br />
+      • Offer educational resources tailored to your needs.<br />
+      • Answer any questions to help you feel confident about your recovery.
+      </>
+    )
   },
 ];
 
@@ -121,6 +154,13 @@ export function MobileLayout({
           >
             {selectedFeature.title}
           </Typography>
+          <Typography
+            gutterBottom
+            variant="body2"
+            sx={{ color: 'text.secondary'}}
+          >
+            {selectedFeature.desc}
+          </Typography>
         </Box>
       </Card>
     </Box>
@@ -150,7 +190,7 @@ export default function Expect() {
     >
       <Box 
       sx={{
-        width: { sm: '100%', md: '60%' },
+        width: { sm: '100%', md: '80%' },
         textAlign: { sm: 'left', md: 'center' },
       }}
       >
@@ -191,7 +231,7 @@ export default function Expect() {
           variant="body1"
           sx={{ color: 'text.secondary', mb: { xs: 2, sm: 4 } }}
         >
-          After leaving the ICU, it&apos;s normal to have questions or concerns. We&apos;re here to:
+          At Care Beyond ICU, we make your recovery journey as seamless and effective as possible. Here&apos;s what you can expect:
         </Typography>
       </motion.div>
       </Box>
@@ -209,6 +249,7 @@ export default function Expect() {
             display: { xs: 'none', sm: 'flex' },
             width: { xs: '100%', md: '70%' },
             height: 'var(--items-image-height)',
+            minHeight: '535px',
           }}
         >
           <Card
@@ -216,7 +257,10 @@ export default function Expect() {
             sx={{
               height: '100%',
               width: '100%',
-              display: { xs: 'none', sm: 'flex' },
+              display: 'flex',
+              flexWrap: 'wrap',
+              flexDirection: 'column',
+              alignContent: 'center',
               border: 'none',
               backgroundColor: 'inherit'
             }}
@@ -224,8 +268,8 @@ export default function Expect() {
             <Box
               sx={(theme) => ({
                 m: 'auto',
-                width: 420,
-                height: 500,
+                width: 480,
+                height: 320,
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
                 alignContent: 'center',
@@ -247,6 +291,9 @@ export default function Expect() {
                   : {}
               }
             />
+            <Typography gutterBottom variant="body2" color="text.secondary">
+            {items[selectedItemIndex].desc}
+            </Typography>
           </Card>
         </Box>
         <div>
@@ -307,6 +354,7 @@ export default function Expect() {
                     <Box
                       component="img"
                       src={icon}
+                      alt={icon}
                       sx={{
                         width: 40,
                         height: 40,
