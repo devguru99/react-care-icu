@@ -90,7 +90,7 @@ export default function Future() {
                 variant="h5"
                 sx={{ color: 'text.secondary', mb: { xs: 2, sm: 4 }, display: 'flex', flexWrap: 'wrap', alignItems: 'center', textAlign: 'center' }}
               >
-                We&apos;ll be by your side every step of the way, ensuring you&apos;re on the right path—your recovery is our top priority.
+                We&apos;ll be by your side every step of the way, ensuring you&apos;re on the right path - your recovery is our top priority.
               </Typography>
             </motion.div>
         </Box>
