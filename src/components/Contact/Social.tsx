@@ -110,7 +110,7 @@ export default function Social() {
                 />
               </a>
               <a
-                href="https://www.linkedin.com/company/carebeyondicu/"
+                href="https://www.linkedin.com/company/care-beyond-icu/"
                 aria-label="Linkedin"
                 target="_blank"
                 rel="noopener noreferrer"

@@ -46,7 +46,7 @@ export default function AppTheme(props: AppThemeProps) {
     return <React.Fragment>{children}</React.Fragment>;
   }
   return (
-    <ThemeProvider theme={theme} disableTransitionOnChange>
+    <ThemeProvider theme={theme} defaultMode='light' disableTransitionOnChange>
       {children}
     </ThemeProvider>
   );

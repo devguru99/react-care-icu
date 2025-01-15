@@ -17,7 +17,7 @@ export default function ColorModeIconDropdown(props: IconButtonOwnProps) {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const handleMode = (targetMode: 'system' | 'light' | 'dark') => () => {
+  const handleMode = (targetMode: 'light' ) => () => {
     setMode(targetMode);
     handleClose();
   };
@@ -37,7 +37,7 @@ export default function ColorModeIconDropdown(props: IconButtonOwnProps) {
       />
     );
   }
-  const resolvedMode = (systemMode || mode) as 'light' | 'dark';
+  const resolvedMode = (mode) as 'light';
   const icon = {
     light: <LightModeIcon />,
     dark: <DarkModeIcon />,
@@ -74,15 +74,15 @@ export default function ColorModeIconDropdown(props: IconButtonOwnProps) {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
-        <MenuItem selected={mode === 'system'} onClick={handleMode('system')}>
+        {/* <MenuItem selected={mode === 'system'} onClick={handleMode('system')}>
           System
-        </MenuItem>
+        </MenuItem> */}
         <MenuItem selected={mode === 'light'} onClick={handleMode('light')}>
           Light
         </MenuItem>
-        <MenuItem selected={mode === 'dark'} onClick={handleMode('dark')}>
+        {/* <MenuItem selected={mode === 'dark'} onClick={handleMode('dark')}>
           Dark
-        </MenuItem>
+        </MenuItem> */}
       </Menu>
     </React.Fragment>
   );
