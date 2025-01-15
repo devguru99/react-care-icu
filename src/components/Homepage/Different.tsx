@@ -12,17 +12,17 @@ import { motion } from 'framer-motion';
 const tiers = [
   {
     title: 'Specialized Support',
-    icon: '/home_diff_1.png',
+    icon: `${import.meta.env.BASE_URL}home_diff_1.png`,
     description: 'Meet with doctors who specialize in ICU recovery. We\'ll focus on preventing problems and helping you heal.',
   },
   {
     title: 'Guidance You Can Trust',
-    icon: '/home_diff_2.png',
+    icon: `${import.meta.env.BASE_URL}home_diff_2.png`,
     description: 'From managing your medications to understanding your recovery plan, we\'re with you every step of the way.',
   },
   {
     title: 'Care on Your Terms',
-    icon: '/home_diff_3.png',
+    icon: `${import.meta.env.BASE_URL}home_diff_3.png`,
     description: 'Our virtual appointments make it easy to get the care you need without leaving home.',
   },
 ];

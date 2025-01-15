@@ -14,7 +14,7 @@ import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined';
 const tiers = [
   {
     title: 'Post-ICU Recovery Guide',
-    icon: '/resource_1.png',
+    icon: `${import.meta.env.BASE_URL}resource_1.png`,
     description: 'Recovering from an ICU stay can be complex and overwhelming. Our comprehensive guide provides insights into what to expect during your recovery, how to manage physical and mental health challenges, and how to build a successful recovery plan.',
     feature: [
       'Steps to manage Post-Intensive Care Syndrome (PICS)',
@@ -27,7 +27,7 @@ const tiers = [
   },
   {
     title: 'Medication Management Resources',
-    icon: '/resource_2.png',
+    icon: `${import.meta.env.BASE_URL}resource_2.png`,
     description: 'Managing medications after ICU discharge is essential for preventing complications and promoting healing. We\'ve created a set of resources to help you understand your prescriptions, avoid common medication errors, and ensure you\'re following your treatment plan effectively.',
     feature: [
       'Medication reconciliation checklist',
@@ -40,7 +40,7 @@ const tiers = [
   },
   {
     title: 'Advanced Directives and Healthcare Planning',
-    icon: '/resource_3.png',
+    icon: `${import.meta.env.BASE_URL}resource_3.png`,
     description: 'Planning for future healthcare decisions is an important part of ensuring your wishes are respected. Our advanced directives resources explain what advanced directives are, why they are important, and how to create them. We also offer guidance on selecting a healthcare power of attorney to ensure that your care preferences are followed.',
     feature: [
       'Step-by-step guide to creating advanced directives',
@@ -53,7 +53,7 @@ const tiers = [
   },
   {
     title: 'Exercise and Physical Rehabilitation Tips',
-    icon: '/resource_4.png',
+    icon: `${import.meta.env.BASE_URL}resource_4.png`,
     description: 'Physical recovery after an ICU stay often requires intentional rehabilitation. Our exercise and rehabilitation resources provide tips and recommendations for safe exercises, recovery routines, and strategies for regaining strength and mobility.',
     feature: [
       'Gentle exercises to improve strength and flexibility',
@@ -67,7 +67,7 @@ const tiers = [
   },
   {
     title: 'Mental Health and Emotional Support',
-    icon: '/resource_5.png',
+    icon: `${import.meta.env.BASE_URL}resource_5.png`,
     description: 'The emotional impact of an ICU stay can be significant. Our mental health resources offer practical tips for managing anxiety, depression, and stress during recovery. We also provide information on coping strategies and how to seek professional support when needed.',
     feature: [
       'Coping with anxiety and depression after ICU',
@@ -81,7 +81,7 @@ const tiers = [
   },
   {
     title: 'Family and Caregiver Support',
-    icon: '/resource_6.png',
+    icon: `${import.meta.env.BASE_URL}resource_6.png`,
     description: 'We understand that family members and caregivers play a crucial role in recovery. Our resources for families and caregivers provide valuable tips for supporting your loved one, managing stress, and ensuring that both the patient and caregiver have the tools they need for a smooth recovery process.',
     feature: [
       'How to provide emotional and physical support for recovery',
@@ -94,7 +94,7 @@ const tiers = [
   },
   {
     title: 'Recovery Tools and Apps',
-    icon: '/resource_7.png',
+    icon: `${import.meta.env.BASE_URL}resource_7.png`,
     description: 'Technology can be a great aid in the recovery process. We\'ve compiled a list of apps and tools that can help you stay on track with your health goals, manage medications, and track recovery progress.',
     feature: [
       'Medication reminder apps',

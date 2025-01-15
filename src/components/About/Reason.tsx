@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Typography, Button, Container } from '@mui/material';
 import { motion } from 'framer-motion';
 
-const backgroundImage = '/about_banner.png';
+const backgroundImage = `${import.meta.env.BASE_URL}about_banner.png`;
 
 export default function Reason () {
     return (

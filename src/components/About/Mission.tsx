@@ -53,7 +53,7 @@ export default function Mission() {
               >
                 <Box
                     component="img"
-                    src='/about_mission_1.png'
+                    src={`${import.meta.env.BASE_URL}about_mission_1.png`}
                     sx={{
                       width: {xs: '100%', md:'auto'},
                       height: {xs: 'auto', md:'auto'},
@@ -166,7 +166,7 @@ export default function Mission() {
               >
                 <Box
                     component="img"
-                    src='/about_mission_2.png'
+                    src={`${import.meta.env.BASE_URL}about_mission_2.png`}
                     sx={{
                       width: {xs: '100%', md:'auto'},
                       height: {xs: 'auto', md:'auto'},

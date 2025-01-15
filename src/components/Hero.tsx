@@ -127,7 +127,7 @@ export default function Hero(props: HeroProps) {
               height={698}
             >
                 <video
-                  src="/hero1.mp4"
+                  src={`${import.meta.env.BASE_URL}hero1.mp4`}
                   autoPlay
                   muted
                   loop
@@ -139,7 +139,7 @@ export default function Hero(props: HeroProps) {
                 />
               </Skeleton> : (
               <video
-              src="/hero1.mp4"
+              src={`${import.meta.env.BASE_URL}hero1.mp4`}
               autoPlay
               muted
               loop

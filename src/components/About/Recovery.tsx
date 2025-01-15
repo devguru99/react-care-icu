@@ -154,7 +154,7 @@ export default function Recovery() {
             >
               <Box
                   component="img"
-                  src='/about_recovery.png'
+                  src={`${import.meta.env.BASE_URL}about_recovery.png`}
                   sx={{
                     width: {xs: '100%', md:'500'},
                     height: {xs: 'auto', md:'500'},

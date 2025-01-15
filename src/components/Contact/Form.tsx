@@ -11,7 +11,7 @@ const FormGrid = styled(Grid)(() => ({
   flexDirection: 'column',
 }));
 
-const backgroundImage = '/contact_form.webp';
+const backgroundImage = `${import.meta.env.BASE_URL}contact_form.webp`;
 
 export default function Form () {
     return (
@@ -58,7 +58,7 @@ export default function Form () {
                 >
                     <Box
                         component="img"
-                        src='/contact_phone.png'
+                        src={`${import.meta.env.BASE_URL}contact_phone.png`}
                         sx={{
                         width: 40,
                         height: 40,
@@ -105,7 +105,7 @@ export default function Form () {
                     </motion.div>
                     <Box
                         component="img"
-                        src='/contact_mail.png'
+                        src={`${import.meta.env.BASE_URL}contact_mail.png`}
                         sx={{
                         width: 40,
                         height: 40,
@@ -152,7 +152,7 @@ export default function Form () {
                     </motion.div>
                     <Box
                         component="img"
-                        src='/contact_chat.png'
+                        src={`${import.meta.env.BASE_URL}contact_chat.png`}
                         sx={{
                         width: 40,
                         height: 40,
@@ -296,7 +296,7 @@ export default function Form () {
                             Submit&nbsp;
                             <Box
                                 component="img"
-                                src='/submit_vector.png'
+                                src={`${import.meta.env.BASE_URL}submit_vector.png`}
                                 sx={{
                                 width: 20,
                                 height: 20,

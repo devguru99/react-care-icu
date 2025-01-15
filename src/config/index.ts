@@ -47,7 +47,7 @@ const loader = {
 };
 
 const defaultMetaTags = {
-  image: '/logo.png',
+  image: `${import.meta.env.BASE_URL}logo.png`,
   description: 'Recovering after an ICU stay? Care Beyond ICU offers virtual medical care to ensure a smooth recovery with personalized plans, medication support, and follow-ups.',
 };
 const giphy404 = 'https://giphy.com/embed/xTiN0L7EW5trfOvEk0';

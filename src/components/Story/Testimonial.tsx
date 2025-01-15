@@ -14,17 +14,17 @@ const tiers = [
   { 
     key: '1',
     description: '“After being discharged from the ICU, I felt overwhelmed by the recovery process. I was unsure how to manage my medications and follow up on my recovery plan. Working with Care Beyond ICU made all the difference. The virtual consultations with my healthcare team were incredibly convenient, and the medication reconciliation process helped me avoid serious issues. I felt supported every step of the way, and I\'m now recovering with confidence.”',
-    author: { name: 'John D.',role: 'ICU Survivor', avatar: '/john_avatar.png' },
+    author: { name: 'John D.',role: 'ICU Survivor', avatar: `${import.meta.env.BASE_URL}john_avatar.png` },
   },
   {
     key: '2',
     description: '“As a caregiver for my mother after her ICU stay, I was worried about how to best support her while managing her medications and recovery. The team at Care Beyond ICU provided us with the resources and guidance we needed. They helped me understand my mother\'s condition, offered emotional support, and made sure she had the right medications at the right time. It felt like we were never alone in this journey.”',
-    author: { name: 'Sarah L.',role: 'Family Caregiver', avatar: '/sarah_avatar.png' },
+    author: { name: 'Sarah L.',role: 'Family Caregiver', avatar: `${import.meta.env.BASE_URL}sarah_avatar.png` },
   },
   {
     key: '3',
     description: '“I didn\'t realize how much I was struggling after being discharged from the ICU until I worked with Care Beyond ICU. The support I received during the post-ICU recovery program helped me regain my strength and my mental clarity. I was able to ask questions, get help with follow-up care, and feel empowered during the process. I\'m doing much better now, and I owe it to the team that was there for me.”',
-    author: { name: 'Carlos M.',role: 'ICU Survivor', avatar: '/carlos_avatar.png' },
+    author: { name: 'Carlos M.',role: 'ICU Survivor', avatar: `${import.meta.env.BASE_URL}carlos_avatar.png` },
   },
 ];
 

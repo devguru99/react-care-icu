@@ -12,17 +12,17 @@ import { motion } from 'framer-motion';
 const tiers = [
   {
     title: 'Grace\'s Journey to Recovery',
-    icon: '/grace_avatar.png',
+    icon: `${import.meta.env.BASE_URL}grace_avatar.png`,
     description: 'When Grace was discharged from the ICU after battling a severe respiratory infection, she was left physically weak and mentally drained. Her family was worried about managing her complex medication regimen and ensuring her recovery was on track. After enrolling in our Post-ICU Recovery Program, Grace received virtual consultations from our team of healthcare professionals who tailored a recovery plan specific to her needs. With regular follow-up appointments and a personalized medication reconciliation process, Grace\'s family felt more confident in her care. Today, Grace is fully recovered and back to enjoying her favorite activities, all thanks to the ongoing support she received through our program.',
   },
   {
     title: 'Tom\'s Successful Post-ICU Recovery',
-    icon: '/tom_avatar.png',
+    icon: `${import.meta.env.BASE_URL}tom_avatar.png`,
     description: 'Tom spent several weeks in the ICU due to a severe heart condition. After discharge, he struggled with fatigue, memory loss, and the mental toll of his experience. He was also at risk of readmission due to complications related to his medication. Tom reached out to us for support, and with our medication reconciliation service, we were able to identify discrepancies and ensure he was taking the correct medications. Additionally, with our mental health resources, Tom gained tools to manage anxiety and depression. After a few months of virtual consultations and continued support, Tom is thriving and now enjoys a higher quality of life with renewed strength.',
   },
   {
     title: 'Lily\'s Positive Experience with Advanced Directives',
-    icon: '/lily_avatar.png',
+    icon: `${import.meta.env.BASE_URL}lily_avatar.png`,
     description: 'Lily had always been proactive about her healthcare, but after a long ICU stay, she realized she needed to formalize her healthcare wishes. She reached out to us for guidance on creating advanced directives and healthcare planning. With the help of our team, Lily was able to create a comprehensive living will and healthcare power of attorney that reflected her values and wishes. Knowing that her healthcare decisions were documented and respected gave her peace of mind during her recovery, and she now feels more in control of her future health.',
   },
 ];

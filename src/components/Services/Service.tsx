@@ -14,7 +14,7 @@ import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined';
 const tiers = [
   {
     title: 'Virtual Consultations with Medical Experts',
-    icon: '/service_1.png',
+    icon: `${import.meta.env.BASE_URL}service_1.png`,
     description: 'Our virtual consultations allow you to connect with our experienced healthcare team from the comfort of your home. We provide personalized care, review your health progress, and ensure that your recovery is on track. Whether you need advice on managing post-ICU symptoms or have questions about your recovery plan, we are here to support you every step of the way.',
     feature: [
       'Schedule a consultation at a time that works for you',
@@ -27,7 +27,7 @@ const tiers = [
   },
   {
     title: 'Medication Reconciliation',
-    icon: '/service_2.png',
+    icon: `${import.meta.env.BASE_URL}service_2.png`,
     description: 'Post-ICU recovery often involves managing multiple medications, which can be overwhelming and confusing. Medication errors or discrepancies are common, but with our medication reconciliation service, we ensure your medications are aligned with your recovery goals. Our team will work with you to review your prescriptions, prevent harmful drug interactions, and ensure that you\'re taking the right medications at the right times.',
     feature: [
       'We review your prescribed medications with you',
@@ -40,7 +40,7 @@ const tiers = [
   },
   {
     title: 'Post-ICU Recovery Support',
-    icon: '/service_3.png',
+    icon: `${import.meta.env.BASE_URL}service_3.png`,
     description: 'Recovering from an ICU stay can be challenging, both physically and mentally. Our post-ICU recovery support is designed to address the unique needs of ICU survivors. We offer ongoing virtual check-ins to monitor your health, provide guidance on managing Post-Intensive Care Syndrome (PICS), and help you return to daily life more smoothly. Our support extends to both physical recovery and emotional well-being.',
     feature: [
       'Regular virtual follow-ups to track your recovery progress',
@@ -53,7 +53,7 @@ const tiers = [
   },
   {
     title: 'Advanced Directives Assistance',
-    icon: '/service_4.png',
+    icon: `${import.meta.env.BASE_URL}service_4.png`,
     description: 'Planning for the future is essential for peace of mind. We offer guidance on creating and completing advanced directives, ensuring your healthcare wishes are documented and respected. Whether you\'re ready to put your wishes in writing or need help understanding what advanced directives entail, our team is here to support you through the process.',
     feature: [
       'We walk you through the process of creating advanced directives',
@@ -65,7 +65,7 @@ const tiers = [
   },
   {
     title: 'Collaboration with Primary Care Physicians',
-    icon: '/service_5.png',
+    icon: `${import.meta.env.BASE_URL}service_5.png`,
     description: 'Effective post-ICU care requires close coordination between specialists and your primary care physician. We work alongside your primary care team to ensure that your recovery is holistic and comprehensive. This collaboration allows us to address any ongoing health issues, track progress, and make adjustments to your care plan as needed.',
     feature: [
       'We communicate directly with your primary care physician to share relevant health updates',
@@ -77,7 +77,7 @@ const tiers = [
   },
   {
     title: 'Patient Education and Resources',
-    icon: '/service_6.png',
+    icon: `${import.meta.env.BASE_URL}service_6.png`,
     description: 'We believe that informed patients recover better. That\'s why we offer a wealth of educational resources to help you understand your condition, your recovery process, and how to manage your health going forward. From videos to written materials, we provide easily accessible information tailored to your needs.',
     feature: [
       'Access educational resources on a variety of recovery topics',

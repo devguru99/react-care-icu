@@ -113,7 +113,7 @@ export default function Top() {
               >
                   <Box
                       component="img"
-                      src='/faq_top.png'
+                      src={`${import.meta.env.BASE_URL}faq_top.png`}
                       sx={{
                         width: {xs: '100%'},
                         height: {xs: 'auto'},

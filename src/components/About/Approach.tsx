@@ -12,17 +12,17 @@ import { motion } from 'framer-motion';
 const tiers = [
   {
     title: 'Virtual Care',
-    icon: '/about_approach_1.png',
+    icon: `${import.meta.env.BASE_URL}about_approach_1.png`,
     description: 'Accessible from anywhere, so transportation isn\'t a barrier.',
   },
   {
     title: 'Collaboration',
-    icon: '/about_approach_2.png',
+    icon: `${import.meta.env.BASE_URL}about_approach_2.png`,
     description: 'We work closely with your primary care doctor to ensure seamless, coordinated care.',
   },
   {
     title: 'Compassion',
-    icon: '/about_approach_3.png',
+    icon: `${import.meta.env.BASE_URL}about_approach_3.png`,
     description: 'Your health and well-being are always our top priorities.',
   },
 ];

@@ -10,7 +10,7 @@ interface SitemarkIconProps {
 export default function SitemarkIcon({ height = 24, width = 160 }: SitemarkIconProps) {
   return (
     <Link to="/" style={{ lineHeight: '0.5' }}>
-      <Box component="img" sx={{ height, width, mr: 2 }} src="/logo.png" alt="Sitemark" />
+      <Box component="img" sx={{ height, width, mr: 2 }} src={`${import.meta.env.BASE_URL}logo.png`} alt="Sitemark" />
     </Link>
   );
 }

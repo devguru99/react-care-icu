@@ -102,7 +102,7 @@ export default function Founder(props: FounderProps) {
                       width: { xs: '100%', md: 'auto' },
                       height: { xs: 'auto', md: 'auto' },
                     }}
-                  image="/about_founder.png"
+                  image={`${import.meta.env.BASE_URL}about_founder.png`}
                   alt="Founder"
                   loading="lazy"
                 />

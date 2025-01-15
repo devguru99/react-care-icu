@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 
-const backgroundImage = '/share.png';
+const backgroundImage =`${import.meta.env.BASE_URL}share.png`;
 
 export default function Share () {
     return (

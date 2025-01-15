@@ -1,6 +1,6 @@
 const blogsData = [
   {
-    img: '/blog/blog_thumb_1.png',
+    img: `${import.meta.env.BASE_URL}blog/blog_thumb_1.png`,
     tag: 'Post-ICU recovery',
     title: 'Life After the ICU: What to Expect and How to Prepare',
     slug: 'life-after-the-icu',
@@ -24,10 +24,10 @@ const blogsData = [
         The road to recovery is different for everyone, but knowing what to expect and how to plan for it can make a big difference. Be patient with yourself, and reach out for help when you need it. With time and support, you can navigate the challenges of life after the ICU and move forward on your healing journey.
       </>
     ),
-    authors: [{ name: 'ICU Director', avatar: '/avatar_founder.png' }],
+    authors: [{ name: 'ICU Director', avatar: `${import.meta.env.BASE_URL}avatar_founder.png` }],
   },
   {
-    img: '/blog/blog_thumb_2.png',
+    img: `${import.meta.env.BASE_URL}blog/blog_thumb_2.png`,
     tag: 'Post-ICU recovery',
     title: 'The Importance of Advance Directives: Planning for the Future',
     slug: 'importance-of-advance-directives',
@@ -66,10 +66,10 @@ const blogsData = [
         Our team can help you understand and complete this important step in your recovery. Schedule a virtual appointment today! <br />Phone: (732) 724-9644
       </>
     ),
-    authors: [{ name: 'ICU Director', avatar: '/avatar_founder.png' }],
+    authors: [{ name: 'ICU Director', avatar: `${import.meta.env.BASE_URL}avatar_founder.png` }],
   },
   {
-    img: '/blog/blog_thumb_3.png',
+    img: `${import.meta.env.BASE_URL}blog/blog_thumb_3.png`,
     tag: 'Post-ICU recovery',
     title: 'Medication Matters: Avoiding Common Post-Discharge Errors',
     slug: 'medication-matters',
@@ -113,10 +113,10 @@ const blogsData = [
 
       </>
     ),
-    authors: [{ name: 'ICU Director', avatar: '/avatar_founder.png' }],
+    authors: [{ name: 'ICU Director', avatar: `${import.meta.env.BASE_URL}avatar_founder.png` }],
   },
   {
-    img: '/blog/blog_thumb_4.png',
+    img: `${import.meta.env.BASE_URL}blog/blog_thumb_4.png`,
     tag: 'Post-ICU recovery',
     title: "Virtual Care 101: How Telehealth Can Make Recovery Easier",
     slug: 'virtual-care-101',
@@ -145,10 +145,10 @@ const blogsData = [
         Telehealth is transforming post-ICU recovery by making care accessible, timely, and stress-free. Take the next step toward a smoother recovery - schedule your virtual appointment today! <br />Phone: (732) 724-9644
       </>
     ),
-    authors: [{ name: 'ICU Director', avatar: '/avatar_founder.png' }],
+    authors: [{ name: 'ICU Director', avatar: `${import.meta.env.BASE_URL}avatar_founder.png` }],
   },
   {
-    img: '/blog/blog_thumb_5.png',
+    img: `${import.meta.env.BASE_URL}blog/blog_thumb_5.png`,
     tag: 'Post-ICU recovery',
     title: 'How to Prevent ICU Readmissions: A Patient\'s Guide',
     slug: 'how-to-prevent-icu-readmissions',
@@ -182,10 +182,10 @@ const blogsData = [
         Our virtual care team specializes in helping ICU patients recover safely and avoid readmissions. Schedule an appointment today to ensure a smoother recovery! <br />Phone: (732) 724-9644
       </>
     ),
-    authors: [{ name: 'ICU Director', avatar: '/avatar_founder.png' }],
+    authors: [{ name: 'ICU Director', avatar: `${import.meta.env.BASE_URL}avatar_founder.png` }],
   },
   {
-    img: '/blog/blog_thumb_6.png',
+    img: `${import.meta.env.BASE_URL}blog/blog_thumb_6.png`,
     tag: 'Post-ICU recovery',
     title: 'Understanding Post-Intensive Care Syndrome (PICS)',
     slug: 'understanding-post-intensive-care-syndrome',
@@ -220,7 +220,7 @@ const blogsData = [
         Our virtual care services are designed to support your recovery journey. Schedule an appointment today! <br />Phone: (732) 724-9644
       </>
     ),
-    authors: [{ name: 'ICU Director', avatar: '/avatar_founder.png' }],
+    authors: [{ name: 'ICU Director', avatar: `${import.meta.env.BASE_URL}avatar_founder.png` }],
   },
 ];
 

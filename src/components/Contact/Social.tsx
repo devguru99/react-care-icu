@@ -72,7 +72,7 @@ export default function Social() {
               >
                 <Box
                   component="img"
-                  src='/social_facebook.png'
+                  src={`${import.meta.env.BASE_URL}social_facebook.png`}
                   sx={{
                   width: 35,
                   height: 35,
@@ -87,7 +87,7 @@ export default function Social() {
               >
                 <Box
                   component="img"
-                  src='/social_twitter.png'
+                  src={`${import.meta.env.BASE_URL}social_twitter.png`}
                   sx={{
                   width: 35,
                   height: 35,
@@ -102,7 +102,7 @@ export default function Social() {
               >
                 <Box
                   component="img"
-                  src='/social_instagram.png'
+                  src={`${import.meta.env.BASE_URL}social_instagram.png`}
                   sx={{
                   width: 35,
                   height: 35,
@@ -117,7 +117,7 @@ export default function Social() {
               >
                 <Box
                   component="img"
-                  src='/social_linkedin.png'
+                  src={`${import.meta.env.BASE_URL}social_linkedin.png`}
                   sx={{
                   width: 35,
                   height: 35,

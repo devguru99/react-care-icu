@@ -12,10 +12,10 @@ import { motion } from 'framer-motion';
 
 const items = [
   {
-    icon: '/expect_1.png',
+    icon: `${import.meta.env.BASE_URL}expect_1.png`,
     title: 'Help you manage your medications safely.',
-    imageLight: `url("/expect_p_1.webp")`,
-    imageDark: `url("/expect_p_1.webp")`,
+    imageLight: `url("${import.meta.env.BASE_URL}expect_p_1.webp")`,
+    imageDark: `url("${import.meta.env.BASE_URL}expect_p_1.webp")`,
     desc: (
       <>
       • Review all your medications to ensure safety and effectiveness.<br />
@@ -30,10 +30,10 @@ const items = [
     )
   },
   {
-    icon: '/expect_2.png',
+    icon: `${import.meta.env.BASE_URL}expect_2.png`,
     title: 'Check on your progress and recommend next steps.',
-    imageLight: `url("/expect_p_2.webp")`,
-    imageDark: `url("/expect_p_2.webp")`,
+    imageLight: `url("${import.meta.env.BASE_URL}expect_p_2.webp")`,
+    imageDark: `url("${import.meta.env.BASE_URL}expect_p_2.webp")`,
     desc: (
       <>
       • Conduct regular virtual check-ins to monitor your recovery.<br />
@@ -48,10 +48,10 @@ const items = [
     )
   },
   {
-    icon: '/expect_3.png',
+    icon: `${import.meta.env.BASE_URL}expect_3.png`,
     title: 'Teach you about your health and what to watch for.',
-    imageLight: `url("/expect_p_3.webp")`,
-    imageDark: `url("/expect_p_3.webp")`,
+    imageLight: `url("${import.meta.env.BASE_URL}expect_p_3.webp")`,
+    imageDark: `url("${import.meta.env.BASE_URL}expect_p_3.webp")`,
     desc: (
       <>
       • Explain your condition and recovery process in simple terms.<br />

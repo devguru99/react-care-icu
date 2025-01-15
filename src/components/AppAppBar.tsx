@@ -75,7 +75,10 @@ export default function AppAppBar() {
               <NavButton to="/services">Services</NavButton>
               <NavButton to="/about">About</NavButton>
               <NavButton to="/blogs">Blog</NavButton>
-              <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}
+              <NavButton to="/resource">Resources</NavButton>
+              <NavButton to="/story">Testimonials & Success Stories</NavButton>
+              <NavButton to="/faq">FAQ</NavButton>
+              {/* <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}
                 id="demo-customized-button"
                 aria-controls={openMenu ? 'basic-menu' : undefined}
                 aria-haspopup="true"
@@ -98,7 +101,7 @@ export default function AppAppBar() {
                 <MenuItem component={NavLink} to="/resource" onClick={handleClose}>Resources</MenuItem>
                 <MenuItem component={NavLink} to="/story" onClick={handleClose}>Testimonials & Success Stories</MenuItem>
                 <MenuItem component={NavLink} to="/faq" onClick={handleClose}>FAQ</MenuItem>
-              </Menu>
+              </Menu> */}
               <NavButton to="/contact" sx={{ minWidth: 0 }}>Contact</NavButton>
             </Box>
           </Box>
@@ -143,7 +146,10 @@ export default function AppAppBar() {
                 <MenuItem component={NavLink} to="/services">Services</MenuItem>
                 <MenuItem component={NavLink} to="/about">About</MenuItem>
                 <MenuItem component={NavLink} to="/blogs">Blog</MenuItem>
-                <Box>
+                <MenuItem component={NavLink} to="/resource">Resources</MenuItem>
+                <MenuItem component={NavLink} to="/story">Testimonials & Success Stories</MenuItem>
+                <MenuItem component={NavLink} to="/faq">FAQ</MenuItem>
+                {/* <Box>
                   <MenuItem onClick={handleToggleSubmenu} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     Pages
                     {submenuOpen ? <ExpandLess /> : <ExpandMoreIcon />}
@@ -159,7 +165,7 @@ export default function AppAppBar() {
                       FAQ
                     </MenuItem>
                   </Collapse>
-                </Box>
+                </Box> */}
                 <MenuItem component={NavLink} to="/contact">Contact</MenuItem>
                 <Divider sx={{ my: 3 }} />
                 <MenuItem>
