@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 
 // @third-party
 import { motion } from 'framer-motion';
-import { ArrowUpward } from '@mui/icons-material';
+import { ArrowUpward, CalendarMonth } from '@mui/icons-material';
 
 import { useLocation } from 'react-router-dom';
 
@@ -41,6 +41,38 @@ export default function ScrollFab(): React.JSX.Element {
 
   return (
     <>
+      <Box
+          sx={{
+            position: 'fixed',
+            zIndex: 1,
+            right: { xs: 20, md: 40 },
+            bottom: { xs: 60, md: 100 },
+          }}
+          title="Please book an appointment!"
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.4 }}
+          >
+            <Fab
+              rel="noopener noreferrer"
+              aria-label="Book an appointment"
+              href='/appointment'
+              sx={{ 
+                width: { xs: 40, lg: 52 }, 
+                height: { xs: 40, lg: 52 }, 
+                backgroundColor: '#183871', 
+                color: 'white',
+                '&:hover': {
+                    backgroundColor: '#102b5e',
+                }, 
+            }}
+            >
+              <CalendarMonth name="Book an appointment" />
+            </Fab>
+          </motion.div>
+        </Box>
       {isVisible && (
         <Box
           sx={{
