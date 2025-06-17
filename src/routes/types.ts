@@ -8,6 +8,7 @@ enum Pages {
   Services,
   About,
   Contact,
+  Appointment,
   Resource,
   Story,
   Faq,

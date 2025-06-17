@@ -5,6 +5,7 @@ import FormLabel from '@mui/material/FormLabel';
 import Grid from '@mui/material/Grid2';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import { styled } from '@mui/system';
+import { NavLink } from 'react-router-dom';
 
 const FormGrid = styled(Grid)(() => ({
   display: 'flex',
@@ -197,7 +198,7 @@ export default function Form () {
                         Ready to take the next step in your recovery? <br />You can easily book a virtual consultation with one of our experts.
                         </Typography>
                     </motion.div>
-                    <Button color="primary" variant="contained" size="small"
+                    <Button component={NavLink} to="/appointment" color="primary" variant="contained" size="small"
                         sx={{
                             marginTop: '1rem',
                         }}

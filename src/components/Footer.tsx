@@ -102,8 +102,8 @@ export default function Footer() {
           <Typography variant="body2" sx={{ fontWeight: 'bold', color: '#183871' }}>
             Get to know Us
           </Typography>
-          <Link href='/contact' color="text.secondary" variant="body2">
-            Get Started
+          <Link href="/https://phr.charmtracker.com/login.sas?FACILITY_ID=3a3047be28b32bf90ac91ebef680b83b04bc39bf0678b4a598ee2e5ce9d5cc8ac81b440bc8a53a00" target="_blank" rel="noopener noreferrer" color="text.secondary" variant="body2">
+            Patient Login/ Sign up
           </Link>
           <Link href='/faq' color="text.secondary" variant="body2">
             FAQS
@@ -128,7 +128,7 @@ export default function Footer() {
           <Typography variant="body2" sx={{ fontWeight: 'bold', color: '#183871' }}>
             Our Services
           </Typography>
-          <Link color="text.secondary" variant="body2" href="/contact">
+          <Link color="text.secondary" variant="body2" href="/appointment">
             Booking appointments
           </Link>
           <Link color="text.secondary" variant="body2" href="/services">

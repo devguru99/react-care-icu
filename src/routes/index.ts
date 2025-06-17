@@ -26,6 +26,11 @@ const routes: Routes = {
     path: '/contact',
     title: 'Contact',
   },
+  [Pages.Appointment]: {
+    component: asyncComponentLoader(() => import('@/pages/Appointment')),
+    path: '/appointment',
+    title: 'Appointment',
+  },
   [Pages.Resource]: {
     component: asyncComponentLoader(() => import('@/pages/Resource')),
     path: '/resource',

@@ -78,7 +78,7 @@ export default function AppAppBar() {
               <NavButton to="/resource">Resources</NavButton>
               <NavButton to="/story">Testimonials & Success Stories</NavButton>
               <NavButton to="/faq">FAQ</NavButton>
-              {/* <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}
+              <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}
                 id="demo-customized-button"
                 aria-controls={openMenu ? 'basic-menu' : undefined}
                 aria-haspopup="true"
@@ -87,7 +87,7 @@ export default function AppAppBar() {
                 onClick={handleClick}
                 endIcon={openMenu ? <ExpandLess /> : <ExpandMoreIcon />}
               >
-                Pages
+                Contact
               </Button>
               <Menu
                 id="basic-menu"
@@ -98,11 +98,10 @@ export default function AppAppBar() {
                   'aria-labelledby': 'basic-button',
                 }}
               >
-                <MenuItem component={NavLink} to="/resource" onClick={handleClose}>Resources</MenuItem>
-                <MenuItem component={NavLink} to="/story" onClick={handleClose}>Testimonials & Success Stories</MenuItem>
-                <MenuItem component={NavLink} to="/faq" onClick={handleClose}>FAQ</MenuItem>
-              </Menu> */}
-              <NavButton to="/contact" sx={{ minWidth: 0 }}>Contact</NavButton>
+                <MenuItem component={NavLink} to="/contact" onClick={handleClose}>Contact</MenuItem>
+                <MenuItem component={NavLink} to="/appointment" onClick={handleClose}>Book Appointment</MenuItem>
+              </Menu>
+              {/* <NavButton to="/contact" sx={{ minWidth: 0 }}>Contact</NavButton> */}
             </Box>
           </Box>
           <Box
@@ -112,8 +111,8 @@ export default function AppAppBar() {
               alignItems: 'center',
             }}
           >
-            <Button component={NavLink} to="/contact" color="primary" variant="contained" size="small">
-              Start Now
+            <Button component={NavLink} to="https://phr.charmtracker.com/login.sas?FACILITY_ID=3a3047be28b32bf90ac91ebef680b83b04bc39bf0678b4a598ee2e5ce9d5cc8ac81b440bc8a53a00" target="_blank" rel="noopener noreferrer" color="primary" variant="contained" size="small">
+              Patient Portal
             </Button>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' }, gap: 1 }}>
@@ -149,28 +148,25 @@ export default function AppAppBar() {
                 <MenuItem component={NavLink} to="/resource">Resources</MenuItem>
                 <MenuItem component={NavLink} to="/story">Testimonials & Success Stories</MenuItem>
                 <MenuItem component={NavLink} to="/faq">FAQ</MenuItem>
-                {/* <Box>
+                <Box>
                   <MenuItem onClick={handleToggleSubmenu} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    Pages
+                    Contact
                     {submenuOpen ? <ExpandLess /> : <ExpandMoreIcon />}
                   </MenuItem>
                   <Collapse in={submenuOpen} timeout="auto" unmountOnExit>
-                    <MenuItem component={NavLink} to="/resource" onClick={handleClose} sx={{ pl: 4 }}>
-                      Resources
+                    <MenuItem component={NavLink} to="/contact" onClick={handleClose} sx={{ pl: 4 }}>
+                      Contact
                     </MenuItem>
-                    <MenuItem component={NavLink} to="/story" onClick={handleClose} sx={{ pl: 4 }}>
-                      Testimonials & Success Stories
-                    </MenuItem>
-                    <MenuItem component={NavLink} to="/faq" onClick={handleClose} sx={{ pl: 4 }}>
-                      FAQ
+                    <MenuItem component={NavLink} to="/appointment" onClick={handleClose} sx={{ pl: 4 }}>
+                      Book Appointment
                     </MenuItem>
                   </Collapse>
-                </Box> */}
-                <MenuItem component={NavLink} to="/contact">Contact</MenuItem>
+                </Box>
+                {/* <MenuItem component={NavLink} to="/contact">Contact</MenuItem> */}
                 <Divider sx={{ my: 3 }} />
                 <MenuItem>
-                  <Button component={NavLink} to="/contact" color="primary" variant="contained" fullWidth>
-                    Start Now
+                  <Button component={NavLink} to="https://phr.charmtracker.com/login.sas?FACILITY_ID=3a3047be28b32bf90ac91ebef680b83b04bc39bf0678b4a598ee2e5ce9d5cc8ac81b440bc8a53a00" target="_blank" rel="noopener noreferrer" color="primary" variant="contained" fullWidth>
+                    Patient Portal
                   </Button>
                 </MenuItem>
               </Box>
