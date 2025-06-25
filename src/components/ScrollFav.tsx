@@ -45,31 +45,35 @@ export default function ScrollFab(): React.JSX.Element {
           sx={{
             position: 'fixed',
             zIndex: 1,
-            right: { xs: 20, md: 40 },
-            bottom: { xs: 60, md: 100 },
+            left: { xs: 20, md: 40 },
+            bottom: { xs: 20, md: 40 },
           }}
-          title="Please book an appointment!"
+          title="New patient? Book appointment!"
         >
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.4 }}
+            style={{ position: 'relative' }}
           >
             <Fab
+              className="glow-on-hover"
               rel="noopener noreferrer"
-              aria-label="Book an appointment"
+              aria-label="New patient? Book appointment!"
               href='/appointment'
               sx={{ 
-                width: { xs: 40, lg: 52 }, 
-                height: { xs: 40, lg: 52 }, 
+                width: { xs: 50, lg: 62 }, 
+                height: { xs: 50, lg: 62 }, 
                 backgroundColor: '#183871', 
                 color: 'white',
+                fontWeight: 600,
                 '&:hover': {
                     backgroundColor: '#102b5e',
                 }, 
             }}
             >
-              <CalendarMonth name="Book an appointment" />
+              <CalendarMonth name="Book an appointment" sx={{ mr: 1 }} />
+              New patient? Book appointment!
             </Fab>
           </motion.div>
         </Box>

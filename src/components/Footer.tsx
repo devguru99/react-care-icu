@@ -102,7 +102,7 @@ export default function Footer() {
           <Typography variant="body2" sx={{ fontWeight: 'bold', color: '#183871' }}>
             Get to know Us
           </Typography>
-          <Link href="/https://phr.charmtracker.com/login.sas?FACILITY_ID=3a3047be28b32bf90ac91ebef680b83b04bc39bf0678b4a598ee2e5ce9d5cc8ac81b440bc8a53a00" target="_blank" rel="noopener noreferrer" color="text.secondary" variant="body2">
+          <Link href="https://phr.charmtracker.com/login.sas?FACILITY_ID=3a3047be28b32bf90ac91ebef680b83b04bc39bf0678b4a598ee2e5ce9d5cc8ac81b440bc8a53a00" target="_blank" rel="noopener noreferrer" color="text.secondary" variant="body2">
             Patient Login/ Sign up
           </Link>
           <Link href='/faq' color="text.secondary" variant="body2">
@@ -150,6 +150,11 @@ export default function Footer() {
           </Typography>
           <Link color="text.secondary" variant="body2" href="tel:+17327249644">
             (732) 724-9644
+          </Link>
+          <Link color="text.secondary" variant="body2" target="_blank" href="https://www.google.com/maps/place/971+US+Highway+202+Ste+N,+Branchburg,+NJ+08876">
+          971 US Highway 202 Ste N. 
+          <br />
+          Somerset County, NJ 08876
           </Link>
           <Link color="text.secondary" variant="body2" href="/contact">
             Contact
