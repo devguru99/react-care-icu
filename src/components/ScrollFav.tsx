@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 
 // @third-party
 import { motion } from 'framer-motion';
-import { ArrowUpward, CalendarMonth } from '@mui/icons-material';
+import { ArrowUpward, CalendarMonth, HelpCenterOutlined } from '@mui/icons-material';
 
 import { useLocation } from 'react-router-dom';
 
@@ -45,10 +45,10 @@ export default function ScrollFab(): React.JSX.Element {
           sx={{
             position: 'fixed',
             zIndex: 1,
-            left: { xs: 20, md: 40 },
-            bottom: { xs: 20, md: 40 },
+            left: { xs: 30, md: 40 },
+            bottom: { xs: 100, md: 40 },
           }}
-          title="New patient? Book appointment!"
+          title="Ready to Begin? Book Now!"
         >
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -59,7 +59,7 @@ export default function ScrollFab(): React.JSX.Element {
             <Fab
               className="glow-on-hover"
               rel="noopener noreferrer"
-              aria-label="New patient? Book appointment!"
+              aria-label="Ready to Begin? Book Now!"
               href='/appointment'
               sx={{ 
                 width: { xs: 50, lg: 62 }, 
@@ -73,17 +73,53 @@ export default function ScrollFab(): React.JSX.Element {
             }}
             >
               <CalendarMonth name="Book an appointment" sx={{ mr: 1 }} />
-              New patient? Book appointment!
+              Ready to Begin? Book Now!
             </Fab>
           </motion.div>
         </Box>
+      <Box
+        sx={{
+          position: 'fixed',
+          zIndex: 1,
+          right: { xs: 20, md: 40 },
+          bottom: { xs: 20, md: 40 },
+        }}
+        title="Not Quite Ready? Learn How We Can Help"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.4 }}
+          style={{ position: 'relative' }}
+        >
+          <Fab
+            className="glow-on-hover"
+            rel="noopener noreferrer"
+            aria-label="Not Quite Ready? Learn How We Can Help"
+            href='/faq'
+            sx={{ 
+              width: { xs: 50, lg: 62 }, 
+              height: { xs: 50, lg: 62 }, 
+              backgroundColor: '#183871', 
+              color: 'white',
+              fontWeight: 600,
+              '&:hover': {
+                  backgroundColor: '#102b5e',
+              }, 
+          }}
+          >
+            <HelpCenterOutlined name="Book an appointment" sx={{ mr: 1 }} />
+            Not Quite Ready? Learn How We Can Help
+          </Fab>
+        </motion.div>
+      </Box>
       {isVisible && (
         <Box
           sx={{
             position: 'fixed',
             zIndex: 1,
             right: { xs: 20, md: 40 },
-            bottom: { xs: 20, md: 40 },
+            bottom: { xs: 20, md: 120 },
           }}
         >
           <motion.div
@@ -103,6 +139,7 @@ export default function ScrollFab(): React.JSX.Element {
                 '&:hover': {
                     backgroundColor: '#102b5e',
                 }, 
+                boxShadow: '0px 0px 5px rgba(255, 255, 255, 0.5)',
             }}
             >
               <ArrowUpward name="tabler-arrow-up" />

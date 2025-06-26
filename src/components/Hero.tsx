@@ -85,16 +85,18 @@ export default function Hero(props: HeroProps) {
               ease: [0.215, 0.61, 0.355, 1]
             }}
           >
+            <Box component="img" sx={{ mr: 2, height: {xs : 48, md : 120}, width: {xs : 320, md : 800} }} src={`${import.meta.env.BASE_URL}logo.png`} alt="Sitemark" />
             <Typography
               variant="h1"
               sx={{
-                display: 'flex',
+                display: 'none',
                 flexDirection: { xs: 'column', sm: 'row' },
                 flexWrap: 'wrap',
                 alignItems: 'center',
                 textAlign: 'center',
                 fontSize: 'clamp(3rem, 10vw, 3.5rem)',
                 justifyContent: 'center',
+                
               }}
             >
               <Typography
@@ -218,7 +220,7 @@ export default function Hero(props: HeroProps) {
             Recovery doesn&apos;t end at discharge—it&apos;s where it begins.
           </Typography>
 
-          <Stack
+          {/* <Stack
             direction={{ xs: 'column', sm: 'row' }}
             spacing={1}
             useFlexGap
@@ -270,7 +272,7 @@ export default function Hero(props: HeroProps) {
             >
               Get Started Today
             </Button>
-          </Stack>
+          </Stack> */}
           
         </Stack>
         
