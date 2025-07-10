@@ -276,6 +276,34 @@ export default function Hero(props: HeroProps) {
           
         </Stack>
         
+
+        <Stack
+          spacing={4}
+          sx={{
+            width: '100%',
+            maxWidth: '1200px',
+            mx: 'auto',
+            mt: 4,
+            px: 0,
+          }}
+        >
+          {/* <Typography variant="h4" align="center">
+            Schedule an Appointment
+          </Typography> */}
+            {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60107.96862129446!2d-74.7242854127765!3d40.07311077624087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa4f05e9b747a13f1%3A0x5261c8a44634a526!2sCare%20Beyond%20ICU.%20A%20Virtual%20Road%20to%20Recovery.%20LLC.!5e1!3m2!1sen!2sus!4v1750926344025!5m2!1sen!2sus" width="100%" height="300" style={{border: "0"}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> */}
+            {/* <Box
+              component="iframe"
+              src="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=04bc39bf0678b4a513f96d8257763cf53aa1ea7a5ad2812fad6b91f197d85b43c791341ca9a05ba4f2e36ee0c5b68975d2bec0af04f23226"
+              sx={{
+                width: '100%',
+                height: { md: '900px', xs: '800px' },
+                border: 0,
+              }}
+              title="Schedule Appointment"
+              loading="lazy"
+            /> */}
+        <div className="elfsight-app-cec19bca-c378-4c4f-a7cb-6f98f4bca248" data-elfsight-app-lazy></div>
+        </Stack>
       </Container>
     </Box>
   );
