@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Typography,
@@ -12,7 +12,7 @@ import FormLabel from "@mui/material/FormLabel";
 import Grid from "@mui/material/Grid2";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import { styled } from "@mui/system";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const FormGrid = styled(Grid)(() => ({
   display: "flex",
@@ -21,12 +21,36 @@ const FormGrid = styled(Grid)(() => ({
 
 const backgroundImage = `${import.meta.env.BASE_URL}contact_form.webp`;
 
+export const contactPrefillTemplates = {
+  invite: `Phone Number: \nPrimary Care Doctors Name: \nPCP Address & Phone Number:`,
+  "advanced-directives": `I am interested in discussing advanced directives especially [...].\nPlease connect me with the appropriate specialist. \nThank you!`,
+  "medication-reconciliation": `I would like to schedule a medication reconciliation appointment.\nPlease advise on the next available time. \nThank you!`,
+};
+
+type ContactPrefillKey = keyof typeof contactPrefillTemplates;
+
+function isContactPrefillKey(key: string): key is ContactPrefillKey {
+  return Object.prototype.hasOwnProperty.call(contactPrefillTemplates, key);
+}
+
 export default function Form() {
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const qParam = queryParams.get("q");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+
+  useEffect(() => {
+    if (qParam && isContactPrefillKey(qParam)) {
+      setFormData((prev) => ({
+        ...prev,
+        message: contactPrefillTemplates[qParam],
+      }));
+    }
+  }, [qParam]);
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
