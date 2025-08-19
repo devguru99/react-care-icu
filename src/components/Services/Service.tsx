@@ -79,19 +79,19 @@ const tiers = [
     buttonText: "Invite My Doctor to Coordinate Care",
     link: "/contact?q=invite",
   },
-  {
-    title: "Patient Education and Resources",
-    icon: `${import.meta.env.BASE_URL}service_6.png`,
-    description:
-      "We believe that informed patients recover better. That's why we offer a wealth of educational resources to help you understand your condition, your recovery process, and how to manage your health going forward. From videos to written materials, we provide easily accessible information tailored to your needs.",
-    feature: [
-      "Access educational resources on a variety of recovery topics",
-      "Receive tips on improving health and preventing readmissions",
-      "Get updates on the latest recovery practices and treatments",
-    ],
-    buttonText: "Explore Our Educational Resources",
-    link: "/resource",
-  },
+  // {
+  //   title: "Patient Education and Resources",
+  //   icon: `${import.meta.env.BASE_URL}service_6.png`,
+  //   description:
+  //     "We believe that informed patients recover better. That's why we offer a wealth of educational resources to help you understand your condition, your recovery process, and how to manage your health going forward. From videos to written materials, we provide easily accessible information tailored to your needs.",
+  //   feature: [
+  //     "Access educational resources on a variety of recovery topics",
+  //     "Receive tips on improving health and preventing readmissions",
+  //     "Get updates on the latest recovery practices and treatments",
+  //   ],
+  //   buttonText: "Explore Our Educational Resources",
+  //   link: "/resource",
+  // },
 ];
 
 export default function Service() {
